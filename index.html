@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,4 +26,114 @@
 
     <script src="javascript.js"></script>
 </body>
+=======
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viescaleImageort" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name=viescaleImageort content="width=device-width, initial-scale=1, user-scalable=yes">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Event and Weather</title>
+
+</head>
+
+<body class="snow">
+
+    <header>
+
+        <div class="card sticky-action">
+
+            <h3>Search for an Event</h3>
+
+        </div>
+
+    </header>
+
+    <!-- backgrounds are attached to the "main" div
+    classes for backgrounds: 
+        "cloud" for cloudy background
+        "rain" for riany background
+        "snow" for snowy background
+        "sun" for sunny background 
+        "storm" for lightning/thunder
+        "clear" for clear and sunny
+    target "main" ID when changing
+        remember to remove "default" class when changing
+        remember to return "default" class when resetting -->
+
+    <div id="main" class="clear">
+
+        <div id="forecast" class="center">
+
+            <!-- generate divs for weather pics and "Date" text, put them within the "forecast" div
+        add "pic" ID to divs holding images (for scaling and positioning)
+        add "date" ID to divs holding "date" text (for scaling and positioning) 
+        add "scaleImage" class to forecast images (for scalaing and positioning)
+
+5-day forecast example below:-->
+
+            <div id="weatherEntry">
+
+                <div id="pic">
+                    <img class="scaleImage" src="assets/images/sun.jpg">
+                </div>
+                <div id="date">Day 1</div>
+
+            </div>
+            <div id="weatherEntry">
+
+                <div id="pic">
+                    <img class="scaleImage" src="assets/images/clear.jpg">
+                </div>
+                <div id="date">Day 2</div>
+
+            </div>
+            <div id="weatherEntry">
+
+                <div id="pic">
+                    <img class="scaleImage" src="assets/images/rain-cloud.jpg">
+                </div>
+                <div id="date">Day 3</div>
+
+            </div>
+            <div id="weatherEntry">
+
+                <div id="pic">
+                    <img class="scaleImage" src="assets/images/rain-drop-glass.jpg">
+                </div>
+                <div id="date">Day 4</div>
+
+            </div>
+            <div id="weatherEntry">
+
+                <div id="pic">
+                    <img class="scaleImage" src="assets/images/snow.jpg">
+                </div>
+                <div id="date">Day 5</div>
+
+            </div>
+
+        </div>
+
+        <div id="event">Test</div>
+
+    </div>
+
+    <footer>Test</footer>
+
+</body>
+
+</html>
+
+<body>
+
+</body>
+
+>>>>>>> JonBranch
 </html>
