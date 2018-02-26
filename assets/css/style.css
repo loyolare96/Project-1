@@ -46,6 +46,14 @@ div.cloud {
     background-size: cover;
 }
 
+div.default {
+    background: url(../images/default.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 div.rain {
     background: url(../images/rain-drop-glass.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
