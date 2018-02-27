@@ -28,6 +28,8 @@ function runAjax2(search) {
         console.log(response);
         var results = response.events;
         for (i = 0; i < results.length; i++) {
+            searchTime = moment(results[i].datetime_local).format("MMMM Do YYYY, h:mm:ss a");
+            console.log(searchTime);
             var seatGeekDiv = $("#seatGeekInfo");
             console.log(results[i].title);
             console.log(results[i].venue.address);
@@ -35,6 +37,7 @@ function runAjax2(search) {
             imgTag = $("<img>");
             newRow = $("<div class='row'>");
             searchUrl = results[i].url;
+            searchAddress = results[i].venue.address
             if (results[i].performers["0"].images.huge != null) {
                 imgTag.attr("src", results[i].performers["0"].images.huge);
             }
@@ -45,13 +48,11 @@ function runAjax2(search) {
             newRow.append(imgTag);
             newRow.append("<br>");
             newRow.append("Title: " + results[i].title + "<br>");
-            newRow.append("Time: " + results[i].datetime_local + "<br>")
-            if (results[i].venue.address != null) {
-                newRow.append(" Address: " + results[i].venue.address + "<br>" + " Venue: " + results[i].venue.name + "<br>");
+            newRow.append("Date: " + searchTime + "<br>")
+            if (searchAddress != null) {
+                newRow.append(" Address: " + searchAddress + "<br>" + " Venue: " + results[i].venue.name + "<br>");
             }
-            if (results[i].url != null) {
-                newRow.append(" URL: " + searchUrl);
-            }
+
             if (searchUrl != null) {
                 var urlString = String(searchUrl)
                 newRow.append("<br>");
@@ -59,6 +60,7 @@ function runAjax2(search) {
 
             }
             seatGeekDiv.append(newRow);
+            newRow.addClass("whyNot");
             seatGeekDiv.append("<br>");
 
         }
