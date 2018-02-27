@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Event and Weather</title>
+    <title>Events and Weather</title>
 
 </head>
 
@@ -20,7 +20,7 @@
 
         <div class="card sticky-action">
 
-            <h3>Search for an Event</h3>
+            <h3>Find Out What's Happening Within 5 Days!</h3>
             <div class="row">
                 <div id="first-col" class="input-field col s4">
                     <input id="searchBar" type="text" class="data" input type="text" placeholder="Search by city">
@@ -88,31 +88,161 @@
                 </div>
             </div>
 
+            <div class="center">
+
+    <!-- 
+
+        Add appropriate IDs to divs below (div id="day1link" for day 1)
+        No ID's by default
+        Divs empty by default
+
+        Add pics, text, and links to divs
+            Add the weather pic to the apporpriate div (exmaple: id="day2link" for day 2) followed by a <br> tag
+            Add appropriate text, as indicated below (use date formats for rows that currently say "Date")
+            Wrap added pic & text in a hyperlink (example: href="#main4" for day 4)
+
+    -->
+
+                <div id="day1link"><a href="#main1">Today</a></div>
+                <div id="day2link"><a href="#main2">Tomorrow</a></div>
+                <div id="day3link"><a href="#main3">Date</a></div>
+                <div id="day4link"><a href="#main4">Date</a></div>
+                <div id="day5link"><a href="#day5">Date</a></div>
+
+            </div>
+
         </div>
 
     </header>
 
     <!--  
-    Generate a div for today's weather (id="day1")
-    Add class for weather:
+    
+    Target "date" div for dates (id="date1" for day 1, "date2" for day 2, etc.) for date
+    Empty by default
+    Add appropriate text
+
+    Target areas for weather info:
+        "pic" for picture (id="pic1" for day 1, "pic2" for day 2, etc.)
+        "tempF" for Farenheight Temp (id="tempF1" for day 1, "tempF2" for day 2, etc.)
+        "tempC" for Celcius Temp (id="tempC1" for day 1, "tempC2" for day 2, etc.)
+        "wind" for Wind Speed (id="wind1" for day 1, "wind2" for day 2, etc.)
+        "humid" for Humidity (id="humid1" for day 1, "humid2" for day 2, etc.)        
+    Empty by default 
+
+    Add class for weather appropriate day div (id="day1" for day 1, "day2" for day2", etc) for backgrounds
         "clear" for "clear sky"
         "cloud" for "cloudy"
         "rain" for "rainy" 
         "snow" for "snowy"
         "sun" for "sunny"
         "storm" for lightning/thunder storms
--->
+    No class by default
 
-    <div class="sun" id="day1">
+    Append appropriate SeatGeek results to appropriate "day" div (id="day1", "day2", etc.)
 
-        <div id="date">
-            <h3>Today:</h3>
+    -->
+
+    <div class="main" id="main1">
+
+        <div class="center">
+
+            <div id="date1">
+                <h3>Today:</h3>
+            </div>
+
+            <div id="pic1">Picture</div>
+            <div id="tempF1">Farenheight</div>
+            <div id="tempC1">Celcius</div>
+            <div id="wind1">Wind</div>
+            <div id="humid1">Humidity</div>
+
+            <div class="clear" id="day1">Events Here</div>
+
         </div>
-        <div id="pic1">Picture</div>
-        <div id="tempF1">Farenheight</div>
-        <div id="tempC1">Celcius</div>
-        <div id="wind1">Wind</div>
-        <div id="humid1">Humidity</div>
+
+    </div>
+
+
+    <div class="main" id="main2">
+
+        <div class="center">
+
+            <div id="date2">
+                <h3>Tomorrow:</h3>
+            </div>
+
+            <div id="pic2">Picture</div>
+            <div id="tempF2">Farenheight</div>
+            <div id="tempC2">Celcius</div>
+            <div id="wind2">Wind</div>
+            <div id="humid2">Humidity</div>
+
+            <div class="rain" id="day2">Events Here</div>
+
+        </div>
+
+    </div>
+
+
+    <div class="main" id="main3">
+
+        <div class="center">
+
+            <div id="date3">
+                <h3>2 Days From Now (Date):</h3>
+            </div>
+
+            <div id="pic3">Picture</div>
+            <div id="tempF3">Farenheight</div>
+            <div id="tempC3">Celcius</div>
+            <div id="wind3">Wind</div>
+            <div id="humid3">Humidity</div>
+
+            <div class="storm" id="day3">Events Here</div>
+
+        </div>
+
+    </div>
+
+
+    <div class="main" id="main4">
+
+        <div class="center">
+
+            <div id="date4">
+                <h3>3 Days From Now (Date):</h3>
+            </div>
+
+            <div id="pic4">Picture</div>
+            <div id="tempF4">Farenheight</div>
+            <div id="tempC4">Celcius</div>
+            <div id="wind4">Wind</div>
+            <div id="humid4">Humidity</div>
+
+            <div class="snow" id="day4">Events Here</div>
+
+        </div>
+
+    </div>
+
+
+    <div class="main" id="main5">
+
+        <div class="center">
+
+            <div id="date5">
+                <h3>4 Days From Now (Date):</h3>
+            </div>
+
+            <div id="pic5">Picture</div>
+            <div id="tempF5">Farenheight</div>
+            <div id="tempC5">Celcius</div>
+            <div id="wind5">Wind</div>
+            <div id="humid5">Humidity</div>
+
+            <div class="clear" id="day5">Events Here</div>
+
+        </div>
 
     </div>
 
