@@ -1,4 +1,6 @@
-
+$(document).ready(function(){
+    $('select').formSelect();
+  });
 
 function runAjax(search) {
 
@@ -22,7 +24,7 @@ function runAjax2(search) {
 
     var seatGeekID = "&client_id=MTA2Njg2NTZ8MTUxOTQxODkzNS44Ng"
 
-    var seatGeekURL = "https://api.seatgeek.com/2/venues?" + seatGeekID + "&city=" + search + "&state=" + state
+    var seatGeekURL = "https://api.seatgeek.com/2/events?" + seatGeekID + "&venue.city=" + search + "&venue.state=" + state
 
     $.ajax({
         url: seatGeekURL,
@@ -36,7 +38,7 @@ function runAjax2(search) {
 
 var search = ''
 
-$("button").click(function () {
+$(".btn").click(function () {
     search = $("#searchBar").val(),
     
     runAjax(search);
