@@ -24,7 +24,6 @@ function runAjax2(search) {
     var state = $("#stateSelect :selected").val()
 
     var seatGeekURL = "https://api.seatgeek.com/2/events?" + seatGeekID + "&venue.city=" + search + "&venue.state=" + state + "&datetime_utc.gt="
-
     $.ajax({
         url: seatGeekURL,
         method: "GET"
