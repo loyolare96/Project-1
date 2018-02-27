@@ -1,3 +1,16 @@
+#stateSelect {
+    max-height: 5%;
+    overflow: auto;
+}
+
+#searchBtn {
+    margin-top: 15px;
+}
+
+#first-col {
+    margin-left: 200px;
+}
+
 #date {
     text-align: center;
 }
