@@ -1,0 +1,103 @@
+#stateSelect {
+    max-height: 5%;
+    overflow: auto;
+}
+
+#searchBtn {
+    margin-top: 15px;
+}
+
+#first-col {
+    margin-left: 200px;
+}
+
+#date {
+    text-align: center;
+}
+
+#main {
+    margin: 0 auto;
+    left: 50%;
+    right: 50%;
+    min-height: 85vh;
+}
+
+#forecast {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#weatherEntry {
+    margin: 0 auto;
+    left: 50%;
+    right: 50%;
+    display: inline-block;
+}
+
+#weatherEntry, #date, #pic {
+    max-width: 19vw; 
+    min-width: 19vw;
+}
+
+div.card{
+    margin: 0;
+}
+
+div.clear {
+    background: url(../images/clear.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+div.cloud {
+    background: url(../images/rain-cloud.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+div.rain {
+    background: url(../images/rain-drop-glass.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+div.snow {
+    background: url(../images/snow.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+div.sun {
+    background: url(../images/sun.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+div.storm {
+    background: url(../images/storm.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+img.scaleImage {
+    height: 19vw;
+    width: 19vw;
+}
