@@ -1,9 +1,5 @@
-$(document).ready(function () {
-    $('select').formSelect();
-})
-
 $(document).ready(function(){
-    $('.datepicker').datepicker();
+    $('select').formSelect();
 });
 
 function runAjax(search) {
@@ -24,6 +20,7 @@ function runAjax2(search) {
     var state = $("#stateSelect :selected").val()
 
     var seatGeekURL = "https://api.seatgeek.com/2/events?" + seatGeekID + "&venue.city=" + search + "&venue.state=" + state + "&datetime_utc.gt="
+
     $.ajax({
         url: seatGeekURL,
         method: "GET"
@@ -32,12 +29,19 @@ function runAjax2(search) {
         var results = response.events;
         for (i = 0; i < results.length; i++) {
             var seatGeekDiv = $("#seatGeekInfo");
-            console.log(results[i].title);
-            console.log(results[i].venue.address);
-            console.log(results[i].url);
-            imgTag = $("<img>");
-            newRow = $("<div class='row'>");
-            searchUrl = results[i].url;
+            var searchUrl = results[i].venue.url
+            var address = results[i].venue.address
+            var title = results[i].title
+            var venueName = results[i].venue.name
+            var eventTime = results[i].datetime_local
+            console.log(moment(eventTime).format('MMMM Do YYYY, h:mm:ss'));
+        
+            console.log(title);
+            console.log(address);
+            console.log(searchUrl);
+            imgTag = $("<img class='eventImages'>");
+            newRow = $("<div class='row events'>");
+            
             if (results[i].performers["0"].images.huge != null) {
                 imgTag.attr("src", results[i].performers["0"].images.huge);
             }
@@ -47,19 +51,19 @@ function runAjax2(search) {
             imgTag.attr("id", "imagelol")
             newRow.append(imgTag);
             newRow.append("<br>");
-            newRow.append("Title: " + results[i].title + "<br>");
-            newRow.append("Time: " + results[i].datetime_local + "<br>")
-            if (results[i].venue.address != null) {
-                newRow.append(" Address: " + results[i].venue.address + "<br>" + " Venue: " + results[i].venue.name + "<br>");
+            var titleString = String(title);
+            newRow.append("<h5>" + titleString + "</h5>" + "<br>");
+            if (address != null) {
+                var addressString = String(address)
+                var nameString = String(venueName)
+                newRow.append("<h6>" + " Address: "  + address + "</h6>" + "<br>")
+                newRow.append("<h6>" + "Venue: "  + venueName + "</h6>" + "<br>");
             }
-            if (results[i].url != null) {
-                newRow.append(" URL: " + searchUrl);
-            }
-            if (searchUrl != null) {
-                var urlString = String(searchUrl)
-                newRow.append("<br>");
-                newRow.append('<a href="' + urlString + '"target="_blank">More Info</a>');
+            newRow.append("<h6>" + moment(eventTime).format('MMMM Do YYYY, h:mm:ss') + "</h6>")
 
+            if (searchUrl!= null) {
+                var urlString = String(searchUrl)
+                newRow.append("<h6>" + '<a href="' + urlString + '"target="_blank">More Info</a>' + "</h6>");
             }
             seatGeekDiv.append(newRow);
             seatGeekDiv.append("<br>");
@@ -76,3 +80,11 @@ $("#searchBtn").click(function () {
     runAjax(search);
     runAjax2(search);
 })
+
+var searchButtonEnter = document.getElementById("searchBar");
+searchButtonEnter.addEventListener("keyup", function (event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("searchButton").click();
+    }
+});

@@ -123,5 +123,13 @@ img {
 
 #imagelol {
     float: left;
-    margin: 30px;
+}
+
+.events {
+    background-color: #eff9fd;
+    border: 2px solid black;
+}
+
+.eventImages {
+    margin-right: 20px;
 }

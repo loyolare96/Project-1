@@ -5,6 +5,7 @@
     <meta name="viescaleImageort" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name=viescaleImageort content="width=device-width, initial-scale=1, user-scalable=yes">
+
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -93,17 +94,16 @@
 
     </header>
 
-    <!-- backgrounds are attached to the "main" div
-    classes for backgrounds: 
-        "cloud" for cloudy background
-        "rain" for riany background
-        "snow" for snowy background
-        "sun" for sunny background 
-        "storm" for lightning/thunder
-        "clear" for clear and sunny
-    target "main" ID when changing
-        remember to remove "default" class when changing
-        remember to return "default" class when resetting -->
+    <!--  
+    Generate a div for today's weather (id="day1")
+    Add class for weather:
+        "clear" for "clear sky"
+        "cloud" for "cloudy"
+        "rain" for "rainy" 
+        "snow" for "snowy"
+        "sun" for "sunny"
+        "storm" for lightning/thunder storms
+-->
 
     <div class="sun" id="day1">
 
@@ -117,11 +117,16 @@
         <div id="humid1">Humidity</div>
 
     </div>
-
+    <div class="container">
+        <div id="seatGeekInfo"></div>
+    </div>
     <footer>Test</footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
     <script src="javascript.js"></script>
 
 </body>
+
 </html>
