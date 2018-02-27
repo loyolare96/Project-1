@@ -21,25 +21,32 @@ function runAjax2(search) {
     }).then(function (response) {
         console.log(response);
         var results = response.events;
-        var seatGeekDiv = $("#seatGeekInfo");
         for (i = 0; i < results.length; i++) {
+            var seatGeekDiv = $("#seatGeekInfo");
             console.log(results[i].title);
             console.log(results[i].venue.address);
             console.log(results[i].url);
+            imgTag = $("<img>");
+            newRow = $("<div class='row'>");
+            
             if (results[i].performers["0"].images.huge != null) {
-                seatGeekDiv.append("<img src='" + results[i].performers["0"].images.huge + "'</img>" + "<br>");
+                imgTag.attr("src", results[i].performers["0"].images.huge);
             }
             else {
-                seatGeekDiv.append("<img src='assets/images/null.png'</img>" + "<br>")
+                imgTag.attr("src", "assets/images/null.png");
             }
-            seatGeekDiv.append("Title: " + results[i].title + "<br>");
-            seatGeekDiv.append("Time: " + results[i].datetime_local + "<br>")
+            imgTag.attr("id", "imagelol")
+            newRow.append(imgTag);
+            newRow.append("<br>");
+            newRow.append("Title: " + results[i].title + "<br>");
+            newRow.append("Time: " + results[i].datetime_local + "<br>")
             if (results[i].venue.address != null) {
-                seatGeekDiv.append(" Address: " + results[i].venue.address + "<br>" + " Venue: " + results[i].venue.name + "<br>");
+                newRow.append(" Address: " + results[i].venue.address + "<br>" + " Venue: " + results[i].venue.name + "<br>");
             }
             if (results[i].url != null) {
-                seatGeekDiv.append(" URL: " + results[i].url);
+                newRow.append(" URL: " + results[i].url);
             }
+            seatGeekDiv.append(newRow);
             seatGeekDiv.append("<br>");
 
         }
@@ -54,3 +61,11 @@ $("button").click(function () {
     runAjax(search);
     runAjax2(search);
 })
+
+var searchButtonEnter = document.getElementById("searchBar");
+searchButtonEnter.addEventListener("keyup", function (event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("searchButton").click();
+    }
+});
