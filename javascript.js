@@ -1,19 +1,16 @@
 function runAjax(search) {
 
 
-    event.preventDefault();
-    
     var weatherAPIKey = "&appid=c065128b5114e00c480ea5844e8f6cbd";
 
-    var weatherURL = "https://api.openweathermap.org/data/2.5/forecast?q=" " + se
+
+    var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + search + weatherAPIKey;
 
     $.ajax({
         url: weatherURL,
         method: "GET"
     }).then(function (response) {
         console.log(response);
-        $(".city").text("<h1>" + response.name + " Weather Details</h1>");
-        $(".temp").text("Temp (F): " +response.main.temp);
     });
 
     var seatGeekID = "&client_id=MTA2Njg2NTZ8MTUxOTQxODkzNS44Ng"
@@ -37,4 +34,3 @@ $("button").click(function () {
     console.log(search);
     runAjax(search);
 })
-
