@@ -14,7 +14,7 @@
 
 </head>
 
-<body class="snow">
+<body>
 
     <header>
 
@@ -80,7 +80,7 @@
                         <option value="wy">Wyoming</option>
 
                     </select>
-                    <label>Materialize Select</label>
+                    <label>Select State</label>
                 </div>
                 <div class="col s2">
                     <a id="searchBtn" class="waves-effect waves-light btn">Search</a>
@@ -92,78 +92,36 @@
 
     </header>
 
-    <!-- backgrounds are attached to the "main" div
-    classes for backgrounds: 
-        "cloud" for cloudy background
-        "rain" for riany background
-        "snow" for snowy background
-        "sun" for sunny background 
-        "storm" for lightning/thunder
-        "clear" for clear and sunny
-    target "main" ID when changing
-        remember to remove "default" class when changing
-        remember to return "default" class when resetting -->
+    <!--  
+    Generate a div for today's weather (id="day1")
+    Add class for weather:
+        "clear" for "clear sky"
+        "cloud" for "cloudy"
+        "rain" for "rainy" 
+        "snow" for "snowy"
+        "sun" for "sunny"
+        "storm" for lightning/thunder storms
+-->
 
-    <div id="main" class="default">
+    <div class="sun" id="day1">
 
-        <div id="forecast" class="center">
-
-            <!-- generate divs for weather pics and "Date" text, put them within the "forecast" div
-        add "pic" ID to divs holding images (for scaling and positioning)
-        add "date" ID to divs holding "date" text (for scaling and positioning) 
-        add "scaleImage" class to forecast images (for scalaing and positioning)
-
-5-day forecast example below:-->
-
-            <div id="weatherEntry">
-
-                <div id="pic">
-                    <img class="scaleImage" src="assets/images/sun.jpg">
-                </div>
-                <div id="date">Day 1</div>
-
-            </div>
-            <div id="weatherEntry">
-
-                <div id="pic">
-                    <img class="scaleImage" src="assets/images/clear.jpg">
-                </div>
-                <div id="date">Day 2</div>
-
-            </div>
-            <div id="weatherEntry">
-
-                <div id="pic">
-                    <img class="scaleImage" src="assets/images/rain-cloud.jpg">
-                </div>
-                <div id="date">Day 3</div>
-
-            </div>
-            <div id="weatherEntry">
-
-                <div id="pic">
-                    <img class="scaleImage" src="assets/images/rain-drop-glass.jpg">
-                </div>
-                <div id="date">Day 4</div>
-
-            </div>
-            <div id="weatherEntry">
-
-                <div id="pic">
-                    <img class="scaleImage" src="assets/images/snow.jpg">
-                </div>
-                <div id="date">Day 5</div>
-
-            </div>
-
+        <div id="date">
+            <h3>Today:</h3>
         </div>
-
-        <div id="event">Test</div>
+        <div id="pic1">Picture</div>
+        <div id="tempF1">Farenheight</div>
+        <div id="tempC1">Celcius</div>
+        <div id="wind1">Wind</div>
+        <div id="humid1">Humidity</div>
 
     </div>
 
     <footer>Test</footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
     <script src="javascript.js"></script>
+
 </body>
+
+</html>

@@ -15,6 +15,18 @@
     text-align: center;
 }
 
+#day1, #day2, #day3, #day4, #day5 {
+    text-align: center;
+    max-width: 100vw;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+#pic1, #pic2, #pic3, #pic4, #pic5, #tempF1, #tempF2, #tempF3, #tempF4, #tempF5, #tempC1, #tempC2, #tempC3, #tempC4, #tempC5, #wind1, #wind2, #wind3, #wind4, #wind5, #humid1, #humid2, #humid3, #humid4, #humid5 {
+    display: inline-block;
+    margin: 10px;
+}
+
 #main {
     margin: 0 auto;
     left: 50%;
@@ -34,13 +46,12 @@
     display: inline-block;
 }
 
-#weatherEntry, #date, #pic {
-    max-width: 19vw; 
-    min-width: 19vw;
-}
-
-div.card{
-    margin: 0;
+body {
+    background: url(../images/default.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 div.clear {
@@ -105,7 +116,10 @@ h3 {
     text-align: center;
 }
 
-img.scaleImage {
+img {
     height: 19vw;
     width: 19vw;
+    min-height: 190px;
+    min-width:190px;
+
 }
