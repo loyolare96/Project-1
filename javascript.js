@@ -1,3 +1,6 @@
+$(document).ready(function () {
+    $('select').formSelect();
+})
 
 function runAjax(search) {
     var weatherAPIKey = "&appid=c065128b5114e00c480ea5844e8f6cbd";
@@ -16,7 +19,7 @@ function runAjax2(search) {
     var seatGeekID = "&client_id=MTA2Njg2NTZ8MTUxOTQxODkzNS44Ng"
     var state = $("#stateSelect :selected").val()
 
-    var seatGeekURL = "https://api.seatgeek.com/2/events?" + seatGeekID + "&venue.city=" + search
+    var seatGeekURL = "https://api.seatgeek.com/2/events?" + seatGeekID + "&venue.city=" + search + "&venue.state=" + state
 
     $.ajax({
         url: seatGeekURL,
@@ -31,7 +34,7 @@ function runAjax2(search) {
             console.log(results[i].url);
             imgTag = $("<img>");
             newRow = $("<div class='row'>");
-            
+            searchUrl = results[i].url;
             if (results[i].performers["0"].images.huge != null) {
                 imgTag.attr("src", results[i].performers["0"].images.huge);
             }
@@ -47,7 +50,13 @@ function runAjax2(search) {
                 newRow.append(" Address: " + results[i].venue.address + "<br>" + " Venue: " + results[i].venue.name + "<br>");
             }
             if (results[i].url != null) {
-                newRow.append(" URL: " + results[i].url);
+                newRow.append(" URL: " + searchUrl);
+            }
+            if (searchUrl != null) {
+                var urlString = String(searchUrl)
+                newRow.append("<br>");
+                newRow.append('<a href="' + urlString + '"target="_blank">More Info</a>');
+
             }
             seatGeekDiv.append(newRow);
             seatGeekDiv.append("<br>");
@@ -57,18 +66,10 @@ function runAjax2(search) {
 }
 var search = ''
 
-$("button").click(function () {
+$("#searchBtn").click(function () {
     $("#seatGeekInfo").empty();
     search = $("#searchBar").val();
     console.log(search);
     runAjax(search);
     runAjax2(search);
 })
-
-var searchButtonEnter = document.getElementById("searchBar");
-searchButtonEnter.addEventListener("keyup", function (event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-        document.getElementById("searchButton").click();
-    }
-});
