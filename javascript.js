@@ -2,6 +2,10 @@ $(document).ready(function(){
     $('select').formSelect();
   });
 
+$(document).ready(function(){
+    $('.datepicker').datepicker();
+});
+
 function runAjax(search) {
 
 
@@ -24,13 +28,19 @@ function runAjax2(search) {
 
     var seatGeekID = "&client_id=MTA2Njg2NTZ8MTUxOTQxODkzNS44Ng"
 
-    var seatGeekURL = "https://api.seatgeek.com/2/events?" + seatGeekID + "&venue.city=" + search + "&venue.state=" + state
+    var seatGeekURL = "https://api.seatgeek.com/2/events?" + seatGeekID + "&venue.city=" + search + "&venue.state=" + state + "&datetime_utc.gt="
 
     $.ajax({
         url: seatGeekURL,
         method: "GET"
     }).then(function (response) {
         console.log(response);
+        var title = (response.events[1].short_title)
+        var ticketUrl = (response.events[1].url)
+        var address = (response.events[1].venue.address)
+        console.log(title)
+        console.log(ticketUrl)
+        console.log(address)
     })
 
 }
