@@ -119,7 +119,9 @@ h3 {
 img {
     height: 19vw;
     width: 19vw;
-    min-height: 190px;
-    min-width:190px;
+}
 
+#imagelol {
+    float: left;
+    margin: 30px;
 }
