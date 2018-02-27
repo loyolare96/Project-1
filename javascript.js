@@ -1,9 +1,5 @@
 function runAjax(search) {
-
-
     var weatherAPIKey = "&appid=c065128b5114e00c480ea5844e8f6cbd";
-
-
     var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + search + weatherAPIKey;
 
     $.ajax({
@@ -30,11 +26,11 @@ function runAjax2(search) {
             console.log(results[i].title);
             console.log(results[i].venue.address);
             console.log(results[i].url);
-            if (results[i].performers["0"].images.huge != null){
+            if (results[i].performers["0"].images.huge != null) {
                 seatGeekDiv.append("<img src='" + results[i].performers["0"].images.huge + "'</img>" + "<br>");
             }
             else {
-                seatGeekDiv.append("<img src='assets/images/null.png'" + "</img>" + "<br>")
+                seatGeekDiv.append("<img src='assets/images/null.png'</img>" + "<br>")
             }
             seatGeekDiv.append("Title: " + results[i].title + "<br>");
             seatGeekDiv.append("Time: " + results[i].datetime_local + "<br>")
