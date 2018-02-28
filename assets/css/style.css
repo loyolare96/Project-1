@@ -14,6 +14,7 @@
 #date1, #date2, #date3, #date4, #date5 {
     width: 100%; 
     background-color: white;
+    padding: 5px;
 }
 
 #day1, #day2, #day3, #day4, #day5 {
@@ -38,11 +39,12 @@
     margin: 10px;
 }
 
-#main {
+div.main {
     margin: 0 auto;
     left: 50%;
     right: 50%;
     min-height: 85vh;
+
 }
 
 body {
@@ -51,6 +53,17 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    width: 100vw;
+}
+
+div.chain1 {
+    max-width: 60vw;
+    display: inline-block;
+}
+
+div.chain2 {
+    max-width: 20vw;
+    display: inline-block;
 }
 
 div.clear {
@@ -59,6 +72,12 @@ div.clear {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    border: solid;
+    border-color: skyblue; 
+    border-bottom-width: 3px;
+    border-top-width: 3px; 
+    border-left-width: 0;
+    border-right-width: 0;
 }
 
 div.cloud {
@@ -67,14 +86,17 @@ div.cloud {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    border: solid;
+    border-color: darkgray; 
+    border-bottom-width: 3px;
+    border-top-width: 3px; 
+    border-left-width: 0;
+    border-right-width: 0;
 }
 
-div.default {
-    background: url(../images/default.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+div.input {
+    min-width: 200px;
+    max-width: 60vw;
 }
 
 div.main {
@@ -88,6 +110,12 @@ div.rain {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    border: solid;
+    border-color: darkblue; 
+    border-bottom-width: 3px;
+    border-top-width: 3px; 
+    border-left-width: 0;
+    border-right-width: 0;
 }
 
 div.snow {
@@ -96,6 +124,23 @@ div.snow {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    border: solid;
+    border-color: #0099ff; 
+    border-bottom-width: 3px;
+    border-top-width: 3px; 
+    border-left-width: 0;
+    border-right-width: 0;
+}
+
+div.select {
+    padding: 10px;
+    min-width: 200px;
+    max-width: 20vw;
+    display: inline-block;
+}
+
+div.space {
+    margin-bottom: 10px;
 }
 
 div.sun {
@@ -104,6 +149,12 @@ div.sun {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    border: solid;
+    border-color: skyblue; 
+    border-bottom-width: 3px;
+    border-top-width: 3px; 
+    border-left-width: 0;
+    border-right-width: 0;
 }
 
 div.storm {
@@ -112,11 +163,17 @@ div.storm {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    border: solid;
+    border-color: grey; 
+    border-bottom-width: 3px;
+    border-top-width: 3px; 
+    border-left-width: 0;
+    border-right-width: 0;
+
 }
 
 h3 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -136,4 +193,6 @@ img {
 .whyNot {
     background-color: white;
     
+.caret {
+    visibility: hidden;
 }
