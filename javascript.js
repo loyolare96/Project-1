@@ -14,6 +14,11 @@ jQuery(document).ready(function($){
     });
 });
 
+date1 = $("#date");
+date2 = $("#date2");
+date3 = $("#date3");
+date4 = $("#date4");
+date5 = $("#date5");
 function runAjax(search) {
     var weatherAPIKey = "&appid=c065128b5114e00c480ea5844e8f6cbd";
     var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + search + weatherAPIKey;
@@ -26,7 +31,7 @@ function runAjax(search) {
     });
 }
 
-
+var seatGeekDiv = $("#seatGeekInfo");
 function runAjax2(search) {
     var seatGeekID = "&client_id=MTA2Njg2NTZ8MTUxOTQxODkzNS44Ng"
     var state = $("#stateSelect :selected").val()
@@ -50,7 +55,6 @@ function runAjax2(search) {
             var threeDaysPlaceholder = moment(threeDays).format("MMM Do YY");
             var fourDays = moment().add(4, 'days');
             var fourDaysPlaceholder = moment(fourDays).format("MMM Do YY");
-            var seatGeekDiv = $("#seatGeekInfo");
             var searchUrl = results[i].venue.url
             var address = results[i].venue.address
             var title = results[i].title
@@ -81,43 +85,36 @@ function runAjax2(search) {
                 newRow.append("<h6>" + '<a href="' + urlString + '"target="_blank">More Info</a>' + "</h6>");
             }
             if (moment().format("MMM Do YY") == (datePlaceholderXD)) {
-                $("#date").append(newRow);
+                date1.append(newRow);
             }
             else if (tomorrowPlaceholder == (datePlaceholderXD)){
-                $("#date2").append(newRow);
+                date2.append(newRow);
             }
             else if (twoDaysPlaceholder == (datePlaceholderXD)){
-                $("#date3").append(newRow);
+                date3.append(newRow);
             }
             else if (threeDaysPlaceholder == (datePlaceholderXD)){
-                $("#date4").append(newRow)
+                date4.append(newRow)
             }
             else if (fourDaysPlaceholder == (datePlaceholderXD)){
-                $("#date5").append(newRow);
+                date5.append(newRow);
             }
             else {
                 seatGeekDiv.append(newRow);
             }
-            newRow.addClass("whyNot");
-            seatGeekDiv.append("<br>");
-            
         }
     })
 }
 var search = ''
 
 $("#searchBtn").click(function () {
-    $("#seatGeekInfo").empty();
-    $("#date").empty();
-    $("#date").append("<h3> Today: </h3>");
-    $("#date2").empty();
-    $("#date2").append("<h3> Tomorrow: </h3>");
-    $("#date3").empty();
-    $("#date3").append("<h3> Two Days From Now: </h3>");
-    $("#date4").empty();
-    $("#date4").append("<h3> Three Days From Now: </h3>");
-    $("#date5").empty();
-    $("#date5").append("<h3> Four Days From Now: </h3>");
+    seatGeekDiv.empty();
+    $(".eventDates").empty();
+    date1.append("<h3> Today: </h3>");
+    date2.append("<h3> Tomorrow: </h3>");
+    date3.append("<h3> Two Days From Now: </h3>");
+    date4.append("<h3> Three Days From Now: </h3>");
+    date5.append("<h3> Four Days From Now: </h3>");
     search = $("#searchBar").val();
     runAjax(search);
     runAjax2(search);
@@ -130,9 +127,3 @@ searchButtonEnter.addEventListener("keyup", function (event) {
         document.getElementById("searchBtn").click();
     }
 });
-
-function getTheDate() {
-    var d = new Date();
-    var n = d.getDate();
-    return n;
-}
