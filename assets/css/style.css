@@ -4,12 +4,10 @@
 }
 
 #searchBtn {
-    margin-top: 15px;
+    margin-top: 21px;
 }
 
-#first-col {
-    margin-left: 200px;
-}
+
 
 #date {
     text-align: center;
@@ -132,4 +130,8 @@ img {
 
 .eventImages {
     margin-right: 20px;
+}
+
+.caret {
+    visibility: hidden;
 }

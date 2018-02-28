@@ -59,7 +59,7 @@ function runAjax2(search) {
                 newRow.append("<h6>" + " Address: "  + address + "</h6>" + "<br>")
                 newRow.append("<h6>" + "Venue: "  + venueName + "</h6>" + "<br>");
             }
-            newRow.append("<h6>" + moment(eventTime).format('MMMM Do YYYY, h:mm:ss') + "</h6>")
+            newRow.append("<h6>" + moment(eventTime).format('MMMM Do YYYY, h:mm:ss') + "</h6>" + "<br>")
 
             if (searchUrl!= null) {
                 var urlString = String(searchUrl)
