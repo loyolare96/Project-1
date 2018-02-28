@@ -36,6 +36,8 @@ function runAjax2(search) {
             var twoDaysPlaceholder = moment(twoDays).format("MMM Do YY");
             var threeDays = moment().add(3, 'days');
             var threeDaysPlaceholder = moment(threeDays).format("MMM Do YY");
+            var fourDays = moment().add(4, 'days');
+            var fourDaysPlaceholder = moment(fourDays).format("MMM Do YY");
             var seatGeekDiv = $("#seatGeekInfo");
             var searchUrl = results[i].venue.url
             var address = results[i].venue.address
@@ -70,7 +72,6 @@ function runAjax2(search) {
                 $("#date").append(newRow);
             }
             else if (tomorrowPlaceholder == (datePlaceholderXD)){
-                console.log("true");
                 $("#date2").append(newRow);
             }
             else if (twoDaysPlaceholder == (datePlaceholderXD)){
@@ -78,6 +79,9 @@ function runAjax2(search) {
             }
             else if (threeDaysPlaceholder == (datePlaceholderXD)){
                 $("#date4").append(newRow)
+            }
+            else if (fourDaysPlaceholder == (datePlaceholderXD)){
+                $("#date5").append(newRow);
             }
             else {
                 seatGeekDiv.append(newRow);
@@ -93,6 +97,15 @@ var search = ''
 $("#searchBtn").click(function () {
     $("#seatGeekInfo").empty();
     $("#date").empty();
+    $("#date").append("<h3> Today: </h3>");
+    $("#date2").empty();
+    $("#date2").append("<h3> Tomorrow: </h3>");
+    $("#date3").empty();
+    $("#date3").append("<h3> Two Days From Now: </h3>");
+    $("#date4").empty();
+    $("#date4").append("<h3> Three Days From Now: </h3>");
+    $("#date5").empty();
+    $("#date5").append("<h3> Four Days From Now: </h3>");
     search = $("#searchBar").val();
     console.log(search);
     runAjax(search);
