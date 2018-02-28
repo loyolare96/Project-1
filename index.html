@@ -2,9 +2,11 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <meta name="viescaleImageort" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name=viescaleImageort content="width=device-width, initial-scale=1, user-scalable=yes">
+
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -14,135 +16,123 @@
 
 <body>
 
-
-
     <header>
 
         <div class="card sticky-action">
 
-            <h3>Find Out What's Happening Within 5 Days!</h3>
-            <div class="row">
-                <div id="first-col" class="input-field col s4">
-                    <input id="searchBar" type="text" class="data" input type="text" placeholder="Search by city">
-                </div>
-                <div class="input-field col s2">
-                    <select id="stateSelect">
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="al">Alabama</option>
-                        <option value="ak">Alaska</option>
-                        <option value="az">Arizona</option>
-                        <option value="ar">Arkansas</option>
-                        <option value="ca">California</option>
-                        <option value="co">Colorado</option>
-                        <option value="ct">Connecticut</option>
-                        <option value="de">Delaware</option>
-                        <option value="fl">Florida</option>
-                        <option value="ga">Georgia</option>
-                        <option value="hi">Hawaii</option>
-                        <option value="id">Idaho</option>
-                        <option value="il">Illinois</option>
-                        <option value="in">Indiana</option>
-                        <option value="ia">Iowa</option>
-                        <option value="ks">Kansas</option>
-                        <option value="ky">Kentucky</option>
-                        <option value="la">Louisiana</option>
-                        <option value="me">Maine</option>
-                        <option value="md">Maryland</option>
-                        <option value="ma">Massachusetts</option>
-                        <option value="mi">Michigan</option>
-                        <option value="mn">Minnesota</option>
-                        <option value="ms">Mississippi</option>
-                        <option value="mo">Missouri</option>
-                        <option value="mt">Montana</option>
-                        <option value="ne">Nebraska</option>
-                        <option value="nv">Nevada</option>
-                        <option value="nh">New Hampshire</option>
-                        <option value="nj">New Jersey</option>
-                        <option value="nm">New Mexico</option>
-                        <option value="ny">New York</option>
-                        <option value="nc">North Carolina</option>
-                        <option value="nd">North Dakota</option>
-                        <option value="oh">Ohio</option>
-                        <option value="ok">Oklahoma</option>
-                        <option value="or">Oregon</option>
-                        <option value="pa">Pennsylvania</option>
-                        <option value="ri">Rhode Island</option>
-                        <option value="sc">South Carolina</option>
-                        <option value="sd">South Dakota</option>
-                        <option value="tn">Tennessee</option>
-                        <option value="tx">Texas</option>
-                        <option value="ut">Utah</option>
-                        <option value="vt">Vermont</option>
-                        <option value="va">Virginia</option>
-                        <option value="wa">Washington</option>
-                        <option value="wv">West Virginia</option>
-                        <option value="wi">Wisconsin</option>
-                        <option value="wy">Wyoming</option>
-
-                    </select>
-                </div>
-                <div class="col s2">
-                    <a id="searchBtn" class="waves-effect waves-light btn">Search</a>
-
-                </div>
+            <h3>Make Plans 5 Days (or Less) in Advance!</h3>
+            <div class="input">
+                <input id="searchBar" type="text" class="data" input type="text" placeholder="Search by city">
             </div>
-
-            <div class="center">
-
-    <!-- 
-
-        Add appropriate IDs to divs below (div id="day1link" for day 1)
-        No ID's by default
-        Divs empty by default
-
-        Add pics, text, and links to divs
-            Add the weather pic to the apporpriate div (exmaple: id="day2link" for day 2) followed by a <br> tag
-            Add appropriate text, as indicated below (use date formats for rows that currently say "Date")
-            Wrap added pic & text in a hyperlink (example: href="#main4" for day 4)
-
-    -->
-
-                <div id="day1link"><a href="#main1">Today</a></div>
-                <div id="day2link"><a href="#main2">Tomorrow</a></div>
-                <div id="day3link"><a href="#main3">Date</a></div>
-                <div id="day4link"><a href="#main4">Date</a></div>
-                <div id="day5link"><a href="#day5">Date</a></div>
+            <div class="select">
+                <select id="stateSelect">
+                    <option value="" disabled selected>Select State</option>
+                    <option value="al">Alabama</option>
+                    <option value="ak">Alaska</option>
+                    <option value="az">Arizona</option>
+                    <option value="ar">Arkansas</option>
+                    <option value="ca">California</option>
+                    <option value="co">Colorado</option>
+                    <option value="ct">Connecticut</option>
+                    <option value="de">Delaware</option>
+                    <option value="fl">Florida</option>
+                    <option value="ga">Georgia</option>
+                    <option value="hi">Hawaii</option>
+                    <option value="id">Idaho</option>
+                    <option value="il">Illinois</option>
+                    <option value="in">Indiana</option>
+                    <option value="ia">Iowa</option>
+                    <option value="ks">Kansas</option>
+                    <option value="ky">Kentucky</option>
+                    <option value="la">Louisiana</option>
+                    <option value="me">Maine</option>
+                    <option value="md">Maryland</option>
+                    <option value="ma">Massachusetts</option>
+                    <option value="mi">Michigan</option>
+                    <option value="mn">Minnesota</option>
+                    <option value="ms">Mississippi</option>
+                    <option value="mo">Missouri</option>
+                    <option value="mt">Montana</option>
+                    <option value="ne">Nebraska</option>
+                    <option value="nv">Nevada</option>
+                    <option value="nh">New Hampshire</option>
+                    <option value="nj">New Jersey</option>
+                    <option value="nm">New Mexico</option>
+                    <option value="ny">New York</option>
+                    <option value="nc">North Carolina</option>
+                    <option value="nd">North Dakota</option>
+                    <option value="oh">Ohio</option>
+                    <option value="ok">Oklahoma</option>
+                    <option value="or">Oregon</option>
+                    <option value="pa">Pennsylvania</option>
+                    <option value="ri">Rhode Island</option>
+                    <option value="sc">South Carolina</option>
+                    <option value="sd">South Dakota</option>
+                    <option value="tn">Tennessee</option>
+                    <option value="tx">Texas</option>
+                    <option value="ut">Utah</option>
+                    <option value="vt">Vermont</option>
+                    <option value="va">Virginia</option>
+                    <option value="wa">Washington</option>
+                    <option value="wv">West Virginia</option>
+                    <option value="wi">Wisconsin</option>
+                    <option value="wy">Wyoming</option>
+                </select>
+            </div>
+            <div>
+                <a id="searchBtn" class="waves-effect waves-light btn">Search</a>
 
             </div>
-
-        </div>
 
     </header>
 
-    <div class="container">
-        <div id="seatGeekInfo"></div>
-    </div>
-    <!-- backgrounds are attached to the "main" div
-    classes for backgrounds: 
-        "cloud" for cloudy background
-        "rain" for riany background
-        "snow" for snowy background
-        "sun" for sunny background 
-        "storm" for lightning/thunder
-        "clear" for clear and sunny
-        target "main" ID when changing
-        remember to remove "default" class when changing
-        remember to return "default" class when resetting -->
     <!--  
     
-    Target "date" div for dates (id="date1" for day 1, "date2" for day 2, etc.) for date
-    Empty by default
-    Add appropriate text
+    Fill "date" divs with relevant info:
+        Add pic and date info for today : id="day1link"
+        Add pic info for tomorrow : id="day2link"
+        and so on
+    On.Click : generate more info for the clicked pic/date in the "day (id="day1" div), see comments below
+        Remember not to have the On.Click active by default, or users will be able to On.Click the div even if it's empty
 
-    Target areas for weather info:
-        "pic" for picture (id="pic1" for day 1, "pic2" for day 2, etc.)
-        "tempF" for Farenheight Temp (id="tempF1" for day 1, "tempF2" for day 2, etc.)
-        "tempC" for Celcius Temp (id="tempC1" for day 1, "tempC2" for day 2, etc.)
-        "wind" for Wind Speed (id="wind1" for day 1, "wind2" for day 2, etc.)
-        "humid" for Humidity (id="humid1" for day 1, "humid2" for day 2, etc.)        
+    -->
+
+    <div class="center">
+
+        <div id="date1">
+            <div id="day1link">
+                <div class="space">Pic</div>
+                <div>Date</div>
+            </div>
+            <div id="day2link">
+                <div class="space">Pic</div>
+                <div>Date</div>
+            </div>
+            <div id="day3link">
+                <div class="space">Pic</div>
+                <div>Date</div>
+            </div>
+            <div id="day4link">
+                <div class="space">Pic</div>
+                <div>Date</div>
+            </div>
+            <div id="day5link">
+                <div class="space">Pic</div>
+                <div>Date</div>
+            </div>
+        </div>
+
+    <!--  
+
+        Target areas for weather info:
+        "pic" for picture (id="pic1")
+        "tempF" for Farenheight Temp (id="tempF1")
+        "tempC" for Celcius Temp (id="tempC1")
+        "wind" for Wind Speed (id="wind1")
+        "humid" for Humidity (id="humid1")        
     Empty by default 
 
-    Add class for weather appropriate day div (id="day1" for day 1, "day2" for day2", etc) for backgrounds
+    Add class for weather appropriate day div (id="day1") for backgrounds
         "clear" for "clear sky"
         "cloud" for "cloudy"
         "rain" for "rainy" 
@@ -151,17 +141,11 @@
         "storm" for lightning/thunder storms
     No class by default
 
-    Append appropriate SeatGeek results to appropriate "day" div (id="day1", "day2", etc.)
+    Append appropriate SeatGeek results to appropriate "day" div (id="day1")
 
     -->
 
-    <div class="main" id="main1">
-
-        <div class="center">
-
-            <div id="date1">
-                <h3>Today:</h3>
-            </div>
+        <div class="rain" id="day1">
 
             <div id="pic1">Picture</div>
             <div id="tempF1">Farenheight</div>
@@ -169,103 +153,16 @@
             <div id="wind1">Wind</div>
             <div id="humid1">Humidity</div>
 
-            <div class="clear" id="day1">Events Here</div>
-
-        </div>
-
-    </div>
-
-
-    <div class="main" id="main2">
-
-        <div class="center">
-
-            <div id="date2">
-                <h3>Tomorrow:</h3>
-            </div>
-
-            <div id="pic2">Picture</div>
-            <div id="tempF2">Farenheight</div>
-            <div id="tempC2">Celcius</div>
-            <div id="wind2">Wind</div>
-            <div id="humid2">Humidity</div>
-
-            <div class="rain" id="day2">Events Here</div>
-
-        </div>
-
-    </div>
-
-
-    <div class="main" id="main3">
-
-        <div class="center">
-
-            <div id="date3">
-                <h3>2 Days From Now (Date):</h3>
-            </div>
-
-            <div id="pic3">Picture</div>
-            <div id="tempF3">Farenheight</div>
-            <div id="tempC3">Celcius</div>
-            <div id="wind3">Wind</div>
-            <div id="humid3">Humidity</div>
-
-            <div class="storm" id="day3">Events Here</div>
-
-        </div>
-
-    </div>
-
-
-    <div class="main" id="main4">
-
-        <div class="center">
-
-            <div id="date4">
-                <h3>3 Days From Now (Date):</h3>
-            </div>
-
-            <div id="pic4">Picture</div>
-            <div id="tempF4">Farenheight</div>
-            <div id="tempC4">Celcius</div>
-            <div id="wind4">Wind</div>
-            <div id="humid4">Humidity</div>
-
-            <div class="snow" id="day4">Events Here</div>
-
-        </div>
-
-    </div>
-
-
-    <div class="main" id="main5">
-
-        <div class="center">
-
-            <div id="date5">
-                <h3>4 Days From Now (Date):</h3>
-            </div>
-
-            <div id="pic5">Picture</div>
-            <div id="tempF5">Farenheight</div>
-            <div id="tempC5">Celcius</div>
-            <div id="wind5">Wind</div>
-            <div id="humid5">Humidity</div>
-
-            <div class="clear" id="day5">Events Here</div>
-
         </div>
 
     </div>
 
     <footer>Test</footer>
-    <script src="https://momentjs.com/downloads/moment.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
     <script src="javascript.js"></script>
-</body>
 
+</body>
 
 </html>
