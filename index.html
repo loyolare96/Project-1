@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Event and Weather</title>
+    <title>Events and Weather</title>
 
 </head>
 
@@ -21,7 +21,7 @@
 
         <div class="card sticky-action">
 
-            <h3>Search for an Event</h3>
+            <h3>Find Out What's Happening Within 5 Days!</h3>
             <div class="row">
                 <div class="col s2"></div>
                 <div id="first-col" class="input-field col s4">
@@ -91,6 +91,29 @@
     
             </div>
 
+            <div class="center">
+
+    <!-- 
+
+        Add appropriate IDs to divs below (div id="day1link" for day 1)
+        No ID's by default
+        Divs empty by default
+
+        Add pics, text, and links to divs
+            Add the weather pic to the apporpriate div (exmaple: id="day2link" for day 2) followed by a <br> tag
+            Add appropriate text, as indicated below (use date formats for rows that currently say "Date")
+            Wrap added pic & text in a hyperlink (example: href="#main4" for day 4)
+
+    -->
+
+                <div id="day1link"><a href="#main1">Today</a></div>
+                <div id="day2link"><a href="#main2">Tomorrow</a></div>
+                <div id="day3link"><a href="#main3">Date</a></div>
+                <div id="day4link"><a href="#main4">Date</a></div>
+                <div id="day5link"><a href="#day5">Date</a></div>
+
+            </div>
+
         </div>
 
     </header>
@@ -106,16 +129,11 @@
         "storm" for lightning/thunder storms
 -->
 
-    <div class="sun" id="day1">
+            <div class="clear" id="day5">Events Here</div>
 
         <div id="date">
             <h3>Today:</h3>
         </div>
-        <div id="pic1">Picture</div>
-        <div id="tempF1">Farenheight</div>
-        <div id="tempC1">Celcius</div>
-        <div id="wind1">Wind</div>
-        <div id="humid1">Humidity</div>
 
     </div>
     <div class="container">

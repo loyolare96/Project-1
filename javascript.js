@@ -28,6 +28,8 @@ function runAjax2(search) {
         console.log(response);
         var results = response.events;
         for (i = 0; i < results.length; i++) {
+            searchTime = moment(results[i].datetime_local).format("MMMM Do YYYY, h:mm:ss a");
+            console.log(searchTime);
             var seatGeekDiv = $("#seatGeekInfo");
             var searchUrl = results[i].venue.url
             var address = results[i].venue.address
@@ -66,6 +68,7 @@ function runAjax2(search) {
                 newRow.append("<h6>" + '<a href="' + urlString + '"target="_blank">More Info</a>' + "</h6>");
             }
             seatGeekDiv.append(newRow);
+            newRow.addClass("whyNot");
             seatGeekDiv.append("<br>");
 
         }
@@ -85,6 +88,6 @@ var searchButtonEnter = document.getElementById("searchBar");
 searchButtonEnter.addEventListener("keyup", function (event) {
     event.preventDefault();
     if (event.keyCode === 13) {
-        document.getElementById("searchButton").click();
+        document.getElementById("searchBtn").click();
     }
 });
