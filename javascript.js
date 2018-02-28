@@ -1,7 +1,3 @@
-$(document).ready(function(){
-    $('select').formSelect();
-  });
-
 function runAjax(search) {
 
 
@@ -16,11 +12,6 @@ function runAjax(search) {
     }).then(function (response) {
         console.log(response);
     });
-}
-
-function runAjax2(search) {
-    var state = $("#stateSelect :selected").val()
-
 
     var weatherURL2 = "https://api.openweathermap.org/data/2.5/forecast?q=" + search+",us" + weatherAPIKey
     $.ajax({
@@ -42,15 +33,19 @@ function runAjax2(search) {
   
       for(var j = i; j<response.list.length; j = j+8) {
           console.log(j);
-          var main = response.list[j].main;
-          console.log(main);
+          var temp = response.list[j].main.temp;
+          var humidity = response.list[j].main.humidity;
+          var wind = response.list[j].wind;
+          console.log(temp);
+          console.log(humidity);
+          console.log(wind);
       }
-  
+
   });
 
     var seatGeekID = "&client_id=MTA2Njg2NTZ8MTUxOTQxODkzNS44Ng"
 
-    var seatGeekURL = "https://api.seatgeek.com/2/events?" + seatGeekID + "&venue.city=" + search + "&venue.state=" + state
+    var seatGeekURL = "https://api.seatgeek.com/2/venues?" + seatGeekID + "&city=" + search
 
     $.ajax({
         url: seatGeekURL,
@@ -64,12 +59,8 @@ function runAjax2(search) {
 
 var search = ''
 
-$(".btn").click(function () {
-    search = $("#searchBar").val(),
-    
+$("button").click(function () {
+    search = $("#searchBar").val();
+    console.log(search);
     runAjax(search);
-    runAjax2(search);
-    
-
-
 })
