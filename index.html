@@ -2,11 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
     <meta name="viescaleImageort" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name=viescaleImageort content="width=device-width, initial-scale=1, user-scalable=yes">
-
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -15,6 +13,8 @@
 </head>
 
 <body>
+
+
 
     <header>
 
@@ -80,7 +80,6 @@
                         <option value="wy">Wyoming</option>
 
                     </select>
-                    <label>Select State</label>
                 </div>
                 <div class="col s2">
                     <a id="searchBtn" class="waves-effect waves-light btn">Search</a>
@@ -115,6 +114,20 @@
 
     </header>
 
+    <div class="container">
+        <div id="seatGeekInfo"></div>
+    </div>
+    <!-- backgrounds are attached to the "main" div
+    classes for backgrounds: 
+        "cloud" for cloudy background
+        "rain" for riany background
+        "snow" for snowy background
+        "sun" for sunny background 
+        "storm" for lightning/thunder
+        "clear" for clear and sunny
+        target "main" ID when changing
+        remember to remove "default" class when changing
+        remember to return "default" class when resetting -->
     <!--  
     
     Target "date" div for dates (id="date1" for day 1, "date2" for day 2, etc.) for date
@@ -247,11 +260,12 @@
     </div>
 
     <footer>Test</footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
     <script src="javascript.js"></script>
-
 </body>
+
 
 </html>
