@@ -137,3 +137,7 @@ img {
     background-color: white;
     
 }
+
+.caret {
+    visibility: hidden;
+}
