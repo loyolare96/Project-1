@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
     $('select').formSelect();
 });
 
@@ -41,16 +41,21 @@ function runAjax2(search) {
         var results = response.events;
         for (i = 0; i < results.length; i++) {
             searchTime = moment(results[i].datetime_local).format("MMMM Do YYYY, h:mm:ss a");
+            var datePlaceholderXD = moment(results[i].datetime_local).format("MMM Do YY");
+            var tomorrow = moment().add(1, 'days');
+            var tomorrowPlaceholder = moment(tomorrow).format("MMM Do YY");
+            var twoDays = moment().add(2, 'days');
+            var twoDaysPlaceholder = moment(twoDays).format("MMM Do YY");
+            var threeDays = moment().add(3, 'days');
+            var threeDaysPlaceholder = moment(threeDays).format("MMM Do YY");
             var seatGeekDiv = $("#seatGeekInfo");
             var searchUrl = results[i].venue.url
             var address = results[i].venue.address
             var title = results[i].title
             var venueName = results[i].venue.name
             var eventTime = results[i].datetime_local
-        
             imgTag = $("<img class='eventImages'>");
             newRow = $("<div class='row events'>");
-            
             if (results[i].performers["0"].images.huge != null) {
                 imgTag.attr("src", results[i].performers["0"].images.huge);
             }
@@ -65,19 +70,33 @@ function runAjax2(search) {
             if (address != null) {
                 var addressString = String(address)
                 var nameString = String(venueName)
-                newRow.append("<h6>" + " Address: "  + address + "</h6>" + "<br>")
-                newRow.append("<h6>" + "Venue: "  + venueName + "</h6>" + "<br>");
+                newRow.append("<h6>" + " Address: " + address + "</h6>" + "<br>")
+                newRow.append("<h6>" + "Venue: " + venueName + "</h6>" + "<br>");
             }
             newRow.append("<h6>" + moment(eventTime).format('MMMM Do YYYY, h:mm:ss a') + "</h6>" + "<br>")
-
-            if (searchUrl!= null) {
+            if (searchUrl != null) {
                 var urlString = String(searchUrl)
                 newRow.append("<h6>" + '<a href="' + urlString + '"target="_blank">More Info</a>' + "</h6>");
             }
-            seatGeekDiv.append(newRow);
+            if (moment().format("MMM Do YY") == (datePlaceholderXD)) {
+                $("#date").append(newRow);
+            }
+            else if (tomorrowPlaceholder == (datePlaceholderXD)){
+                console.log("true");
+                $("#date2").append(newRow);
+            }
+            else if (twoDaysPlaceholder == (datePlaceholderXD)){
+                $("#date3").append(newRow);
+            }
+            else if (threeDaysPlaceholder == (datePlaceholderXD)){
+                $("#date4").append(newRow)
+            }
+            else {
+                seatGeekDiv.append(newRow);
+            }
             newRow.addClass("whyNot");
             seatGeekDiv.append("<br>");
-
+            
         }
     })
 }
@@ -85,6 +104,7 @@ var search = ''
 
 $("#searchBtn").click(function () {
     $("#seatGeekInfo").empty();
+    $("#date").empty();
     search = $("#searchBar").val();
     runAjax(search);
     runAjax2(search);
@@ -97,3 +117,9 @@ searchButtonEnter.addEventListener("keyup", function (event) {
         document.getElementById("searchBtn").click();
     }
 });
+
+function getTheDate() {
+    var d = new Date();
+    var n = d.getDate();
+    return n;
+}
