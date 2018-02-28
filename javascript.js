@@ -2,6 +2,18 @@ $(document).ready(function(){
     $('select').formSelect();
 });
 
+jQuery(document).ready(function($){
+    $('#searchBar').keypress(function (e) {
+        var regex = new RegExp("^[0-9a-zA-Z_\. ]+$");
+        var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+        if (regex.test(str)) {
+            return true;
+        }
+        e.preventDefault();
+        return false;
+    });
+});
+
 function runAjax(search) {
     var weatherAPIKey = "&appid=c065128b5114e00c480ea5844e8f6cbd";
     var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + search + weatherAPIKey;
@@ -29,18 +41,13 @@ function runAjax2(search) {
         var results = response.events;
         for (i = 0; i < results.length; i++) {
             searchTime = moment(results[i].datetime_local).format("MMMM Do YYYY, h:mm:ss a");
-            console.log(searchTime);
             var seatGeekDiv = $("#seatGeekInfo");
             var searchUrl = results[i].venue.url
             var address = results[i].venue.address
             var title = results[i].title
             var venueName = results[i].venue.name
             var eventTime = results[i].datetime_local
-            console.log(moment(eventTime).format('MMMM Do YYYY, h:mm:ss'));
         
-            console.log(title);
-            console.log(address);
-            console.log(searchUrl);
             imgTag = $("<img class='eventImages'>");
             newRow = $("<div class='row events'>");
             
@@ -61,7 +68,7 @@ function runAjax2(search) {
                 newRow.append("<h6>" + " Address: "  + address + "</h6>" + "<br>")
                 newRow.append("<h6>" + "Venue: "  + venueName + "</h6>" + "<br>");
             }
-            newRow.append("<h6>" + moment(eventTime).format('MMMM Do YYYY, h:mm:ss') + "</h6>" + "<br>")
+            newRow.append("<h6>" + moment(eventTime).format('MMMM Do YYYY, h:mm:ss a') + "</h6>" + "<br>")
 
             if (searchUrl!= null) {
                 var urlString = String(searchUrl)
@@ -79,7 +86,6 @@ var search = ''
 $("#searchBtn").click(function () {
     $("#seatGeekInfo").empty();
     search = $("#searchBar").val();
-    console.log(search);
     runAjax(search);
     runAjax2(search);
 })
