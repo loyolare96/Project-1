@@ -20,8 +20,8 @@
 
 
 #day1, #day2, #day3, #day4, #day5 {
-    max-width: 100vw;
-    min-width: 200px;
+    max-width: 100%;
+    min-width: 280px;
     margin-bottom: 20px;
 }
 
