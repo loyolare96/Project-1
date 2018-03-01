@@ -1,11 +1,11 @@
 $(document).ready(function () {
     $('select').formSelect();
 });
-date1 = $("#date");
-date2 = $("#date2");
-date3 = $("#date3");
-date4 = $("#date4");
-date5 = $("#date5");
+var date1 = $("#date");
+var date2 = $("#date2");
+var date3 = $("#date3");
+var date4 = $("#date4");
+var date5 = $("#date5");
 function runAjax(search) {
     var weatherAPIKey = "&appid=c065128b5114e00c480ea5844e8f6cbd";
     var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + search + weatherAPIKey;
@@ -17,6 +17,7 @@ function runAjax(search) {
         console.log(response);
     });
 }
+
 
 var seatGeekDiv = $("#seatGeekInfo");
 function runAjax2(search) {
@@ -108,6 +109,7 @@ function runAjax2(search) {
 var search = ''
 
 $("#searchBtn").click(function () {
+    $("#forecast").empty();
     seatGeekDiv.empty();
     $(".eventDates").empty();
     $(".dateLabel").empty();

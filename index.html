@@ -18,18 +18,18 @@
 
 
     <header>
-
-        <div class="card sticky-action">
-
-            <h2>Find Out What's Happening Within 5 Days!</h2>
-            <div class="row">
-                <div class="col s2"></div>
-                <div id="first-col" class="input-field col s4">
+        <div class="head">
+            <div class="row trans">
+                <h2>Make Plans 5 Days (Or Less) In Advance!</h2>
+            </div>
+            <div class="row trans">
+                <div class="col s1"></div>
+                <div id="first-col" class="input-field col s5">
                     <input id="searchBar" type="text" class="data" input type="text" placeholder="Search by city">
                 </div>
-                <div class="input-field col s2">
+                <div class="input-field col s5">
                     <select id="stateSelect">
-                        <option value="" disabled selected>Choose your option</option>
+                        <option value="" disabled selected>State &#8681;</option>
                         <option value="al">Alabama</option>
                         <option value="ak">Alaska</option>
                         <option value="az">Arizona</option>
@@ -80,74 +80,39 @@
                         <option value="wv">West Virginia</option>
                         <option value="wi">Wisconsin</option>
                         <option value="wy">Wyoming</option>
-
                     </select>
-                    <label>Select State</label>
                 </div>
-                <div class="col s2">
+                <div class="col s1"></div>
+            </div>
+            <div class="row button trans">
+                <div class="ugh">
                     <a id="searchBtn" class="waves-effect waves-light btn">Search</a>
-
                 </div>
-
+                <div class="space"></div>
             </div>
 
-            <div class="center">
-
-                <!-- 
-
-        Add appropriate IDs to divs below (div id="day1link" for day 1)
-        No ID's by default
-        Divs empty by default
-
-        Add pics, text, and links to divs
-            Add the weather pic to the apporpriate div (exmaple: id="day2link" for day 2) followed by a <br> tag
-            Add appropriate text, as indicated below (use date formats for rows that currently say "Date")
-            Wrap added pic & text in a hyperlink (example: href="#main4" for day 4)
-
-    -->
-
-                <div id="day1link">
-                    <a href="#date">Today</a>
-                </div>
-                <div id="day2link">
-                    <a href="#date2">Tomorrow</a>
-                </div>
-                <div id="day3link">
-                    <a href="#date3">Two Days From Now</a>
-                </div>
-                <div id="day4link">
-                    <a href="#date4">Three Days From Now</a>
-                </div>
-                <div id="day5link">
-                    <a href="#date5">Four Days From Now</a>
-                </div>
-
-            </div>
-
-        </div>
-
-    </header>
-
-    <!--  
-    Generate a div for today's weather (id="day1")
-    Add class for weather:
-        "clear" for "clear sky"
-        "cloud" for "cloudy"
-        "rain" for "rainy" 
-        "snow" for "snowy"
-        "sun" for "sunny"
-        "storm" for lightning/thunder storms
+            <!--      
+    Create "date" divs the "forecast" div (id="forecast") with relevant info:
+        Add pic and date info for today : id="day1link"
+        Add pic info for tomorrow : id="day2link"
+        and so on
+    Add "border" class
+        No class by default 
+    On.Click : generate more info for the clicked pic/date in the "day (id="day1" div), see comments below
+        Remember not to have the On.Click active by default, or users will be able to On.Click the div even if it's empty
 -->
 
-    <div class="clear" id="day5">Events Here</div>
+            <div class="row  trans" id="forecast">
+            </div>
 
+    </header>
     <div id="date" class="dateLabel">
         <div id="events" class="eventDates"></div>
     </div>
     <div id="date2" class="dateLabel">
         <div id="events2" class="eventDates"></div>
     </div>
-    <div id="date3" class="dateLabel"> 
+    <div id="date3" class="dateLabel">
         <div id="events3" class="eventDates"></div>
     </div>
     <div id="date4" class="dateLabel">
@@ -156,12 +121,21 @@
     <div id="date5" class="dateLabel">
         <div id="events5" class="eventDates"></div>
     </div>
-    </div>
     <div class="container">
         <div id="seatGeekInfo"></div>
     </div>
-    <div id="appendhere"></div>
-    <footer>Test</footer>
+    <footer>
+        <div class="center">
+
+            <p>Powered by
+                <a href="https://seatgeek.com" target="blank">SeatGeek</a> and
+                <a href="https://openweathermap.org" target="blank">OpenWeather</a>
+            </p>
+            <p>Made with
+                <a href="http://materializecss.com" target="blank">Materialize</p>
+
+        </div>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
