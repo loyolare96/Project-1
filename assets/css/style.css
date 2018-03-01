@@ -197,6 +197,7 @@ footer {
 
 h2 {
     margin: 0px;
+    padding-top: 5px;
 }
 
 h3 {
@@ -211,6 +212,7 @@ h3 {
 header {
     color: white;
     width: 100%;
+    min-width: 280px;
 }
 
 input, select {
