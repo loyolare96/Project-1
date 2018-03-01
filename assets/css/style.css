@@ -50,9 +50,9 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    width: 100vw;
+    width: 100%;
     font-family: 'PT Sans Caption', sans-serif;
-    width: 100vw;
+    width: 100%;
 }
 
 div.clear {
