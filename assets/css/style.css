@@ -60,12 +60,9 @@ div.clear {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border: solid;
+    border: solid 3px;
     border-color: skyblue; 
-    border-bottom-width: 3px;
-    border-top-width: 3px; 
-    border-left-width: 0;
-    border-right-width: 0;
+    color: black;
 }
 
 div.cloud {
@@ -74,12 +71,9 @@ div.cloud {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border: solid;
+    border: solid 3px;
     border-color: darkgray; 
-    border-bottom-width: 3px;
-    border-top-width: 3px; 
-    border-left-width: 0;
-    border-right-width: 0;
+    color: white;
 }
 
 div.head {
@@ -110,12 +104,9 @@ div.rain {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border: solid;
+    border: solid 3px;
     border-color: darkblue; 
-    border-bottom-width: 3px;
-    border-top-width: 3px; 
-    border-left-width: 0;
-    border-right-width: 0;
+    color: white;
 }
 
 div.row {
@@ -136,12 +127,9 @@ div.snow {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border: solid;
+    border: solid 3px;
     border-color: #0099ff; 
-    border-bottom-width: 3px;
-    border-top-width: 3px; 
-    border-left-width: 0;
-    border-right-width: 0;
+    color: black;
 }
 
 div.space {
@@ -154,12 +142,9 @@ div.sun {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border: solid;
+    border: solid 3px;
     border-color: skyblue; 
-    border-bottom-width: 3px;
-    border-top-width: 3px; 
-    border-left-width: 0;
-    border-right-width: 0;
+    color: black;
 }
 
 div.storm {
@@ -168,12 +153,19 @@ div.storm {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border: solid;
+    border: solid 3px;
     border-color: grey; 
-    border-bottom-width: 3px;
-    border-top-width: 3px; 
-    border-left-width: 0;
-    border-right-width: 0;
+    color: white;
+}
+
+div.weather {
+    background: url(../images/weather.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border: solid 3px;
+    border-color: skyblue; 
 }
 
 div.carrot {

@@ -39,7 +39,7 @@ function runAjax(search) {
             var wind = response.list[j].wind.speed;
             var weatherDiv = $("<div class = 'weatherDiv'>");
             var dayTitle = arr[i++]
-            var weatherDesc = response.list[j].weather["0"].main; 
+            var weatherDesc = response.list[j].weather["0"].main;
             weatherDiv.append("<h6 class = 'bold'>" + dayTitle + "</h6>" + "<br>");
 
             console.log(weatherDesc);
@@ -49,10 +49,19 @@ function runAjax(search) {
             weatherDiv.append("<p>" + "Wind: " + wind + " mph" + "</p>" + "<br>");
 
             if (weatherDesc == "Clouds") {
-                weatherDiv.prepend("assets/");
+                weatherDiv.addClass("rain");
             }
             if (weatherDesc == "Rain") {
                 weatherDiv.addClass("rain");
+            }
+            if (weatherDesc == "Clear") {
+                weatherDiv.addClass("clear");
+            }
+            if (weatherDesc == "Snow") {
+                weatherDiv.addClass("snow");
+            }
+            if (weatherDesc == "Sun" || weatherDesc == "Sunny") {
+                weatherDiv.addClass("sun");
             }
 
             $("#forecast").append(weatherDiv);
