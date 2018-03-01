@@ -119,11 +119,11 @@ $("#searchBtn").click(function () {
     date1.append("<div id='events' class='eventDates'>");
     date2.prepend("<h3> Tomorrow: </h3>");
     date2.append("<div id='events2' class='eventDates'>");
-    date3.prepend("<h3> Two Days From Now: </h3>");
+    date3.prepend("<h3> 2 Days From Now: </h3>");
     date3.append("<div id='events3' class='eventDates'>");
-    date4.prepend("<h3> Three Days From Now: </h3>");
+    date4.prepend("<h3> 3 Days From Now: </h3>");
     date4.append("<div id='events4' class='eventDates'>");
-    date5.prepend("<h3> Four Days From Now: </h3>");
+    date5.prepend("<h3> 4 Days From Now: </h3>");
     date5.append("<div id='events5' class='eventDates'>");
     search = $("#searchBar").val();
     console.log(search);

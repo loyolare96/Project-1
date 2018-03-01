@@ -1,4 +1,4 @@
-var arr = ["Today", "Tomorrow", "Two Days From Now", "Three Days From Now", "Four Days From Now"]
+var arr = ["Today", "Tomorrow", "2 Days From Now", "3 Days From Now", "4 Days From Now"]
 
 function runAjax(search) {
 
@@ -39,11 +39,22 @@ function runAjax(search) {
             var wind = response.list[j].wind.speed;
             var weatherDiv = $("<div class = 'weatherDiv'>");
             var dayTitle = arr[i++]
-            weatherDiv.append("<h6>" + dayTitle + "</h6>" + "<br>");
+            var weatherDesc = response.list[j].weather["0"].main; 
+            weatherDiv.append("<h6 class = 'bold'>" + dayTitle + "</h6>" + "<br>");
+
+            console.log(weatherDesc);
 
             weatherDiv.append("<p>" + "Temp: " + temp + " F" + "</p>" + "<br>");
             weatherDiv.append("<p>" + "Humidity: " + humidity + " %" + "</p>" + "<br>");
             weatherDiv.append("<p>" + "Wind: " + wind + " mph" + "</p>" + "<br>");
+
+            if (weatherDesc == "Clouds") {
+                weatherDiv.prepend("assets/");
+            }
+            if (weatherDesc == "Rain") {
+                weatherDiv.addClass("rain");
+            }
+
             $("#forecast").append(weatherDiv);
 
         }
