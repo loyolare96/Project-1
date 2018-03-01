@@ -1,0 +1,152 @@
+#stateSelect {
+    max-height: 5%;
+    overflow: auto;
+}
+
+#searchBtn {
+    margin-top: 21px;
+}
+
+
+
+#date, #date2, #date3, #date4, #date5 {
+    width: 100%; 
+}
+
+#day1, #day2, #day3, #day4, #day5 {
+    max-width: 100vw;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+#day1link, #day2link, #day3link, #day4link, #day5link {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: solid;
+    border-color: black;
+    border-width: 3px;
+    margin: 10px;
+    padding: 10px;
+}
+
+#pic1, #pic2, #pic3, #pic4, #pic5, #tempF1, #tempF2, #tempF3, #tempF4, #tempF5, #tempC1, #tempC2, #tempC3, #tempC4, #tempC5, #wind1, #wind2, #wind3, #wind4, #wind5, #humid1, #humid2, #humid3, #humid4, #humid5 {
+    display: inline-block;
+    margin: 10px;
+}
+
+#main {
+    margin: 0 auto;
+    left: 50%;
+    right: 50%;
+    min-height: 85vh;
+}
+
+body {
+    background: url(../images/default.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+div.clear {
+    background: url(../images/clear.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+div.cloud {
+    background: url(../images/rain-cloud.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+div.default {
+    background: url(../images/default.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+div.main {
+    width: 100%;
+    background-color: white;
+}
+
+div.rain {
+    background: url(../images/rain-drop-glass.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+div.snow {
+    background: url(../images/snow.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+div.sun {
+    background: url(../images/sun.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+div.storm {
+    background: url(../images/storm.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: white;
+    border: 2px solid black;
+}
+
+
+img {
+    height: 19vw;
+    width: 19vw;
+}
+
+#imagelol {
+    float: left;
+}
+
+.events {
+    background-color: #eff9fd;
+    border: 2px solid black;
+}
+
+.eventImages {
+    margin-right: 20px;
+}
+
+.caret {
+    visibility: hidden;
+}
+
+.noEvents {
+    text-align: center;
+    background-color: #eff9fd;
+}
