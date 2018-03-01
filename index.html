@@ -22,7 +22,7 @@
             <div class="center">
                 <div class="head">
                     <div class="row trans">
-                        <h3>Make Plans 5 Days (Or Less) In Advance!</h3>
+                        <h2>Make Plans 5 Days (Or Less) In Advance!</h2>
                     </div>
                     <div class="row trans">
                         <div class="col s2"></div>
@@ -104,32 +104,6 @@
         Remember not to have the On.Click active by default, or users will be able to On.Click the div even if it's empty
 -->
 
-                    <div class="row  trans" id="forecast">
-
-                        <div id="date1">
-                            <div id="day1link" class="border">
-                                <div class="space">Pic</div>
-                                <div>Date</div>
-                            </div>
-                            <div id="day2link" class="border">
-                                <div class="space">Pic</div>
-                                <div>Date</div>
-                            </div>
-                            <div id="day3link" class="border">
-                                <div class="space">Pic</div>
-                                <div>Date</div>
-                            </div>
-                            <div id="day4link" class="border">
-                                <div class="space">Pic</div>
-                                <div>Date</div>
-                            </div>
-                            <div id="day5link" class="border">
-                                <div class="space">Pic</div>
-                                <div>Date</div>
-                            </div>
-                        </div>
-
-                    </div>
                 </div>
                 <div class="row">
                     <div class="center">
@@ -142,42 +116,52 @@
         "rain" for "rainy" 
         "snow" for "snowy"
         "sun" for "sunny"
-                        "storm" for lightning/thunder storms
+        "storm" for lightning/thunder storms
 -->
 
                         <div class="clear" id="day1">
 
-                            <div id="pic1">Pic</div>
-                            <div id="tempF1">Temp in F</div>
-                            <div id="tempC1">Temp in C</div>
-                            <div id="wind1">Test</div>
-                            <div id="humid1">Test</div>
+                            <div class="row  trans" id="forecast">
+                            </div>
 
                         </div>
-
                     </div>
                 </div>
             </div>
     </header>
 
-    <div id="date">
-        <h3>Today:</h3>
+    <div id="date" class="dateLabel">
+        <div id="events" class="eventDates"></div>
     </div>
-    <div id="date2">
-        <h3>Tomorrow:</h3>
+    <div id="date2" class="dateLabel">
+        <div id="events2" class="eventDates"></div>
     </div>
-    <div id="date3">
-        <h3>Two Days After:</h3>
+    <div id="date3" class="dateLabel">
+        <div id="events3" class="eventDates"></div>
     </div>
-    <div id="date4">
-        <h3>Three Days After:</h3>
+    <div id="date4" class="dateLabel">
+        <div id="events4" class="eventDates"></div>
     </div>
+    <div id="date5" class="dateLabel">
+        <div id="events5" class="eventDates"></div>
     </div>
 
     <div class="container">
         <div id="seatGeekInfo"></div>
     </div>
-    <footer>Test</footer>
+
+    <footer>
+        <div class="center">
+
+            <p>Powered by
+                <a href="">SeatGeek</a> and
+                <a href="">OpenWeather</a>
+            </p>
+            <p>Made with
+                <a href="">Materialize</p>
+
+        </div>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>

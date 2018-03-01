@@ -2,6 +2,12 @@ $(document).ready(function () {
     $('select').formSelect();
 });
 
+var date1 = $("#date");
+var date2 = $("#date2");
+var date3 = $("#date3");
+var date4 = $("#date4");
+var date5 = $("#date5");
+
 function runAjax(search) {
     var weatherAPIKey = "&appid=c065128b5114e00c480ea5844e8f6cbd";
     var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + search + weatherAPIKey;
@@ -14,6 +20,7 @@ function runAjax(search) {
     });
 }
 
+var seatGeekDiv = $("#seatGeekInfo")
 
 function runAjax2(search) {
     var seatGeekID = "&client_id=MTA2Njg2NTZ8MTUxOTQxODkzNS44Ng"
@@ -36,7 +43,8 @@ function runAjax2(search) {
             var twoDaysPlaceholder = moment(twoDays).format("MMM Do YY");
             var threeDays = moment().add(3, 'days');
             var threeDaysPlaceholder = moment(threeDays).format("MMM Do YY");
-            var seatGeekDiv = $("#seatGeekInfo");
+            var fourDays = moment().add(4, 'days');
+            var fourDaysPlaceholder = moment(fourDays).format("MMM Do YY");
             var searchUrl = results[i].venue.url
             var address = results[i].venue.address
             var title = results[i].title
@@ -56,8 +64,6 @@ function runAjax2(search) {
             var titleString = String(title);
             newRow.append("<h5>" + titleString + "</h5>" + "<br>");
             if (address != null) {
-                var addressString = String(address)
-                var nameString = String(venueName)
                 newRow.append("<h6>" + " Address: " + address + "</h6>" + "<br>")
                 newRow.append("<h6>" + "Venue: " + venueName + "</h6>" + "<br>");
             }
@@ -67,32 +73,57 @@ function runAjax2(search) {
                 newRow.append("<h6>" + '<a href="' + urlString + '"target="_blank">More Info</a>' + "</h6>");
             }
             if (moment().format("MMM Do YY") == (datePlaceholderXD)) {
-                $("#date").append(newRow);
+                $("#events").append(newRow);
             }
-            else if (tomorrowPlaceholder == (datePlaceholderXD)){
-                console.log("true");
-                $("#date2").append(newRow);
+            else if (tomorrowPlaceholder == (datePlaceholderXD)) {
+                $("#events2").append(newRow);
             }
-            else if (twoDaysPlaceholder == (datePlaceholderXD)){
-                $("#date3").append(newRow);
+            else if (twoDaysPlaceholder == (datePlaceholderXD)) {
+                $("#events3").append(newRow);
             }
-            else if (threeDaysPlaceholder == (datePlaceholderXD)){
-                $("#date4").append(newRow)
+            else if (threeDaysPlaceholder == (datePlaceholderXD)) {
+                $("#events4").append(newRow)
+            }
+            else if (fourDaysPlaceholder == (datePlaceholderXD)) {
+                $("#events5").append(newRow);
             }
             else {
                 seatGeekDiv.append(newRow);
             }
-            newRow.addClass("whyNot");
-            seatGeekDiv.append("<br>");
-            
+        }
+        if ($("#events").text().length == 0) {
+            $("#events").append("<h6 class='noEvents'> There are no events planned for this date. </h6>");
+        }
+        if ($("#events2").text().length == 0) {
+            $("#events2").append("<h6 class='noEvents'> There are no events planned for this date. </h6>");
+        }
+        if ($("#events3").text().length == 0) {
+            $("#events3").append("<h6 class='noEvents'> There are no events planned for this date. </h6>");
+        }
+        if ($("#events4").text().length == 0) {
+            $("#events4").append("<h6 class='noEvents'> There are no events planned for this date. </h6>");
+        }
+        if ($("#events5").text().length == 0) {
+            $("#events5").append("<h6 class='noEvents'> There are no events planned for this date. </h6>");
         }
     })
 }
 var search = ''
 
 $("#searchBtn").click(function () {
-    $("#seatGeekInfo").empty();
-    $("#date").empty();
+    seatGeekDiv.empty();
+    $(".eventDates").empty();
+    $(".dateLabel").empty();
+    date1.prepend("<h3> Today: </h3>");
+    date1.append("<div id='events' class='eventDates'>");
+    date2.prepend("<h3> Tomorrow: </h3>");
+    date2.append("<div id='events2' class='eventDates'>");
+    date3.prepend("<h3> Two Days From Now: </h3>");
+    date3.append("<div id='events3' class='eventDates'>");
+    date4.prepend("<h3> Three Days From Now: </h3>");
+    date4.append("<div id='events4' class='eventDates'>");
+    date5.prepend("<h3> Four Days From Now: </h3>");
+    date5.append("<div id='events5' class='eventDates'>");
     search = $("#searchBar").val();
     console.log(search);
     runAjax(search);
