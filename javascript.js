@@ -1,13 +1,11 @@
 $(document).ready(function () {
     $('select').formSelect();
 });
-
 var date1 = $("#date");
 var date2 = $("#date2");
 var date3 = $("#date3");
 var date4 = $("#date4");
 var date5 = $("#date5");
-
 function runAjax(search) {
     var weatherAPIKey = "&appid=c065128b5114e00c480ea5844e8f6cbd";
     var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + search + weatherAPIKey;
@@ -20,8 +18,8 @@ function runAjax(search) {
     });
 }
 
-var seatGeekDiv = $("#seatGeekInfo")
 
+var seatGeekDiv = $("#seatGeekInfo");
 function runAjax2(search) {
     var seatGeekID = "&client_id=MTA2Njg2NTZ8MTUxOTQxODkzNS44Ng"
     var state = $("#stateSelect :selected").val()
@@ -119,11 +117,11 @@ $("#searchBtn").click(function () {
     date1.append("<div id='events' class='eventDates'>");
     date2.prepend("<h3> Tomorrow: </h3>");
     date2.append("<div id='events2' class='eventDates'>");
-    date3.prepend("<h3> 2 Days From Now: </h3>");
+    date3.prepend("<h3> Two Days From Now: </h3>");
     date3.append("<div id='events3' class='eventDates'>");
-    date4.prepend("<h3> 3 Days From Now: </h3>");
+    date4.prepend("<h3> Three Days From Now: </h3>");
     date4.append("<div id='events4' class='eventDates'>");
-    date5.prepend("<h3> 4 Days From Now: </h3>");
+    date5.prepend("<h3> Four Days From Now: </h3>");
     date5.append("<div id='events5' class='eventDates'>");
     search = $("#searchBar").val();
     console.log(search);
@@ -138,9 +136,3 @@ searchButtonEnter.addEventListener("keyup", function (event) {
         document.getElementById("searchBtn").click();
     }
 });
-
-function getTheDate() {
-    var d = new Date();
-    var n = d.getDate();
-    return n;
-}
