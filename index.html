@@ -18,87 +18,83 @@
 <body>
 
     <header>
-
-        <div class="card sticky-action">
+        <div>
             <div class="center">
+                <div class="head">
+                    <div class="row trans">
+                        <h3>Make Plans 5 Days (Or Less) In Advance!</h3>
+                    </div>
+                    <div class="row trans">
+                        <div class="col s3"></div>
+                        <div id="first-col" class="input-field col s4">
+                            <input id="searchBar" type="text" class="data" input type="text" placeholder="Search by city">
+                        </div>
+                        <div class="input-field col s2">
+                            <select id="stateSelect">
+                                <option value="" disabled selected>State</option>
+                                <option value="al">Alabama</option>
+                                <option value="ak">Alaska</option>
+                                <option value="az">Arizona</option>
+                                <option value="ar">Arkansas</option>
+                                <option value="ca">California</option>
+                                <option value="co">Colorado</option>
+                                <option value="ct">Connecticut</option>
+                                <option value="de">Delaware</option>
+                                <option value="fl">Florida</option>
+                                <option value="ga">Georgia</option>
+                                <option value="hi">Hawaii</option>
+                                <option value="id">Idaho</option>
+                                <option value="il">Illinois</option>
+                                <option value="in">Indiana</option>
+                                <option value="ia">Iowa</option>
+                                <option value="ks">Kansas</option>
+                                <option value="ky">Kentucky</option>
+                                <option value="la">Louisiana</option>
+                                <option value="me">Maine</option>
+                                <option value="md">Maryland</option>
+                                <option value="ma">Massachusetts</option>
+                                <option value="mi">Michigan</option>
+                                <option value="mn">Minnesota</option>
+                                <option value="ms">Mississippi</option>
+                                <option value="mo">Missouri</option>
+                                <option value="mt">Montana</option>
+                                <option value="ne">Nebraska</option>
+                                <option value="nv">Nevada</option>
+                                <option value="nh">New Hampshire</option>
+                                <option value="nj">New Jersey</option>
+                                <option value="nm">New Mexico</option>
+                                <option value="ny">New York</option>
+                                <option value="nc">North Carolina</option>
+                                <option value="nd">North Dakota</option>
+                                <option value="oh">Ohio</option>
+                                <option value="ok">Oklahoma</option>
+                                <option value="or">Oregon</option>
+                                <option value="pa">Pennsylvania</option>
+                                <option value="ri">Rhode Island</option>
+                                <option value="sc">South Carolina</option>
+                                <option value="sd">South Dakota</option>
+                                <option value="tn">Tennessee</option>
+                                <option value="tx">Texas</option>
+                                <option value="ut">Utah</option>
+                                <option value="vt">Vermont</option>
+                                <option value="va">Virginia</option>
+                                <option value="wa">Washington</option>
+                                <option value="wv">West Virginia</option>
+                                <option value="wi">Wisconsin</option>
+                                <option value="wy">Wyoming</option>
+                            </select>
+                        </div>
+                        <div class="col s3"></div>
+                    </div>
+                    <div class="row button trans">
+                        <div class="ugh">
+                            <a id="searchBtn" class="waves-effect waves-light btn">Search</a>
+                        </div>
+                        <div class="space"></div>
+                    </div>
 
-                <div class="row">
-                    <h3>Make Plans 5 Days (Or Less) In Advance!</h3>
-                </div>
-                <div class="row">
-                    <div class="col s3"></div>
-                    <div id="first-col" class="input-field col s4">
-                        <input id="searchBar" type="text" class="data" input type="text" placeholder="Search by city">
-                    </div>
-                    <div class="input-field col s2">
-                        <select id="stateSelect">
-                            <option value="" disabled selected>State</option>
-                            <option value="al">Alabama</option>
-                            <option value="ak">Alaska</option>
-                            <option value="az">Arizona</option>
-                            <option value="ar">Arkansas</option>
-                            <option value="ca">California</option>
-                            <option value="co">Colorado</option>
-                            <option value="ct">Connecticut</option>
-                            <option value="de">Delaware</option>
-                            <option value="fl">Florida</option>
-                            <option value="ga">Georgia</option>
-                            <option value="hi">Hawaii</option>
-                            <option value="id">Idaho</option>
-                            <option value="il">Illinois</option>
-                            <option value="in">Indiana</option>
-                            <option value="ia">Iowa</option>
-                            <option value="ks">Kansas</option>
-                            <option value="ky">Kentucky</option>
-                            <option value="la">Louisiana</option>
-                            <option value="me">Maine</option>
-                            <option value="md">Maryland</option>
-                            <option value="ma">Massachusetts</option>
-                            <option value="mi">Michigan</option>
-                            <option value="mn">Minnesota</option>
-                            <option value="ms">Mississippi</option>
-                            <option value="mo">Missouri</option>
-                            <option value="mt">Montana</option>
-                            <option value="ne">Nebraska</option>
-                            <option value="nv">Nevada</option>
-                            <option value="nh">New Hampshire</option>
-                            <option value="nj">New Jersey</option>
-                            <option value="nm">New Mexico</option>
-                            <option value="ny">New York</option>
-                            <option value="nc">North Carolina</option>
-                            <option value="nd">North Dakota</option>
-                            <option value="oh">Ohio</option>
-                            <option value="ok">Oklahoma</option>
-                            <option value="or">Oregon</option>
-                            <option value="pa">Pennsylvania</option>
-                            <option value="ri">Rhode Island</option>
-                            <option value="sc">South Carolina</option>
-                            <option value="sd">South Dakota</option>
-                            <option value="tn">Tennessee</option>
-                            <option value="tx">Texas</option>
-                            <option value="ut">Utah</option>
-                            <option value="vt">Vermont</option>
-                            <option value="va">Virginia</option>
-                            <option value="wa">Washington</option>
-                            <option value="wv">West Virginia</option>
-                            <option value="wi">Wisconsin</option>
-                            <option value="wy">Wyoming</option>
-                        </select>
-                        <label>Select State</label>
-                    </div>
-                    <div class="col s3"></div>
-                </div>
-                <div class="row button">
-                    <div class="ugh">
-                        <a id="searchBtn" class="waves-effect waves-light btn">Search</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-<!--      
-    Create "date" divs with relevant info:
+                    <!--      
+    Create "date" divs the "forecast" div (id="forecast") with relevant info:
         Add pic and date info for today : id="day1link"
         Add pic info for tomorrow : id="day2link"
         and so on
@@ -108,34 +104,37 @@
         Remember not to have the On.Click active by default, or users will be able to On.Click the div even if it's empty
 -->
 
-    <div class="center">
+                    <div class="row  trans" id="forecast">
 
-        <div id="date1">
-            <div id="day1link" class="border">
-                <div class="space">Pic</div>
-                <div>Date</div>
-            </div>
-            <div id="day2link" class="border">
-                <div class="space">Pic</div>
-                <div>Date</div>
-            </div>
-            <div id="day3link" class="border">
-                <div class="space">Pic</div>
-                <div>Date</div>
-            </div>
-            <div id="day4link" class="border">
-                <div class="space">Pic</div>
-                <div>Date</div>
-            </div>
-            <div id="day5link" class="border">
-                <div class="space">Pic</div>
-                <div>Date</div>
-            </div>
-        </div>
+                        <div id="date1">
+                            <div id="day1link" class="border">
+                                <div class="space">Pic</div>
+                                <div>Date</div>
+                            </div>
+                            <div id="day2link" class="border">
+                                <div class="space">Pic</div>
+                                <div>Date</div>
+                            </div>
+                            <div id="day3link" class="border">
+                                <div class="space">Pic</div>
+                                <div>Date</div>
+                            </div>
+                            <div id="day4link" class="border">
+                                <div class="space">Pic</div>
+                                <div>Date</div>
+                            </div>
+                            <div id="day5link" class="border">
+                                <div class="space">Pic</div>
+                                <div>Date</div>
+                            </div>
+                        </div>
 
-    </header>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="center">
 
-    <!--  
+                        <!--  
     Generate a div for today's weather (id="day1")
     Add class for weather:
         "clear" for "clear sky"
@@ -143,24 +142,38 @@
         "rain" for "rainy" 
         "snow" for "snowy"
         "sun" for "sunny"
-        "storm" for lightning/thunder storms
+                        "storm" for lightning/thunder storms
 -->
 
-            <div class="clear" id="day5">Events Here</div>
+                        <div class="clear" id="day1">
 
-        <div id="date">
-            <h3>Today:</h3>
-        </div>
-        <div id="date2">
-            <h3>Tomorrow:</h3>
-        </div>
-        <div id="date3">
-            <h3>Two Days After:</h3>
-        </div>
-        <div id="date4">
-            <h3>Three Days After:</h3>
-        </div>
+                            <div id="pic1">Pic</div>
+                            <div id="tempF1">Temp in F</div>
+                            <div id="tempC1">Temp in C</div>
+                            <div id="wind1">Test</div>
+                            <div id="humid1">Test</div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </header>
+
+    <div id="date">
+        <h3>Today:</h3>
     </div>
+    <div id="date2">
+        <h3>Tomorrow:</h3>
+    </div>
+    <div id="date3">
+        <h3>Two Days After:</h3>
+    </div>
+    <div id="date4">
+        <h3>Three Days After:</h3>
+    </div>
+    </div>
+
     <div class="container">
         <div id="seatGeekInfo"></div>
     </div>
