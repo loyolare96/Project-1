@@ -195,6 +195,10 @@ footer {
     color: white; 
 }
 
+h2 {
+    margin: 0px;
+}
+
 h3 {
     padding: 10px;
     text-align: center;
