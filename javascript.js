@@ -61,8 +61,6 @@ function runAjax2(search) {
             var titleString = String(title);
             newRow.append("<h5>" + titleString + "</h5>" + "<br>");
             if (address != null) {
-                var addressString = String(address)
-                var nameString = String(venueName)
                 newRow.append("<h6>" + " Address: " + address + "</h6>" + "<br>")
                 newRow.append("<h6>" + "Venue: " + venueName + "</h6>" + "<br>");
             }
@@ -72,23 +70,38 @@ function runAjax2(search) {
                 newRow.append("<h6>" + '<a href="' + urlString + '"target="_blank">More Info</a>' + "</h6>");
             }
             if (moment().format("MMM Do YY") == (datePlaceholderXD)) {
-                date1.append(newRow);
+                $("#events").append(newRow);
             }
-            else if (tomorrowPlaceholder == (datePlaceholderXD)){
-                date2.append(newRow);
+            else if (tomorrowPlaceholder == (datePlaceholderXD)) {
+                $("#events2").append(newRow);
             }
-            else if (twoDaysPlaceholder == (datePlaceholderXD)){
-                date3.append(newRow);
+            else if (twoDaysPlaceholder == (datePlaceholderXD)) {
+                $("#events3").append(newRow);
             }
-            else if (threeDaysPlaceholder == (datePlaceholderXD)){
-                date4.append(newRow)
+            else if (threeDaysPlaceholder == (datePlaceholderXD)) {
+                $("#events4").append(newRow)
             }
-            else if (fourDaysPlaceholder == (datePlaceholderXD)){
-                date5.append(newRow);
+            else if (fourDaysPlaceholder == (datePlaceholderXD)) {
+                $("#events5").append(newRow);
             }
             else {
                 seatGeekDiv.append(newRow);
             }
+        }
+        if ($("#events").text().length == 0) {
+            $("#events").append("<h6 class='noEvents'> There are no events planned for this date. </h6>");
+        }
+        if ($("#events2").text().length == 0) {
+            $("#events2").append("<h6 class='noEvents'> There are no events planned for this date. </h6>");
+        }
+        if ($("#events3").text().length == 0) {
+            $("#events3").append("<h6 class='noEvents'> There are no events planned for this date. </h6>");
+        }
+        if ($("#events4").text().length == 0) {
+            $("#events4").append("<h6 class='noEvents'> There are no events planned for this date. </h6>");
+        }
+        if ($("#events5").text().length == 0) {
+            $("#events5").append("<h6 class='noEvents'> There are no events planned for this date. </h6>");
         }
     })
 }
@@ -97,11 +110,17 @@ var search = ''
 $("#searchBtn").click(function () {
     seatGeekDiv.empty();
     $(".eventDates").empty();
-    date1.append("<h3> Today: </h3>");
-    date2.append("<h3> Tomorrow: </h3>");
-    date3.append("<h3> Two Days From Now: </h3>");
-    date4.append("<h3> Three Days From Now: </h3>");
-    date5.append("<h3> Four Days From Now: </h3>");
+    $(".dateLabel").empty();
+    date1.prepend("<h3> Today: </h3>");
+    date1.append("<div id='events' class='eventDates'>");
+    date2.prepend("<h3> Tomorrow: </h3>");
+    date2.append("<div id='events2' class='eventDates'>");
+    date3.prepend("<h3> Two Days From Now: </h3>");
+    date3.append("<div id='events3' class='eventDates'>");
+    date4.prepend("<h3> Three Days From Now: </h3>");
+    date4.append("<div id='events4' class='eventDates'>");
+    date5.prepend("<h3> Four Days From Now: </h3>");
+    date5.append("<div id='events5' class='eventDates'>");
     search = $("#searchBar").val();
     console.log(search);
     runAjax(search);

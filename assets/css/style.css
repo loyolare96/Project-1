@@ -9,9 +9,8 @@
 
 
 
-#date1, #date2, #date3, #date4, #date5 {
+#date, #date2, #date3, #date4, #date5 {
     width: 100%; 
-    background-color: white;
 }
 
 #day1, #day2, #day3, #day4, #day5 {
@@ -111,12 +110,19 @@ div.storm {
     -o-background-size: cover;
     background-size: cover;
 }
-
-h3 {
+h2 {
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
 }
+h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: white;
+    border: 2px solid black;
+}
+
 
 img {
     height: 19vw;
@@ -138,4 +144,9 @@ img {
 
 .caret {
     visibility: hidden;
+}
+
+.noEvents {
+    text-align: center;
+    background-color: #eff9fd;
 }
