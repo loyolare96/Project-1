@@ -2,7 +2,7 @@ $(document).ready(function () {
     $('select').formSelect();
 });
 
-jQuery(document).ready(function($){
+jQuery(document).ready(function ($) {
     $('#searchBar').keypress(function (e) {
         var regex = new RegExp("^[0-9a-zA-Z_\. ]+$");
         var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
@@ -87,20 +87,20 @@ function runAjax2(search) {
             if (moment().format("MMM Do YY") == (datePlaceholderXD)) {
                 date1.append(newRow);
             }
-            else if (tomorrowPlaceholder == (datePlaceholderXD)){
+            else if (tomorrowPlaceholder == (datePlaceholderXD)) {
                 date2.append(newRow);
+                if ( !$.trim( $('.eventDates').html() ).length ) {
+                    date2.remove();
+                }
             }
-            else if (twoDaysPlaceholder == (datePlaceholderXD)){
+            else if (twoDaysPlaceholder == (datePlaceholderXD)) {
                 date3.append(newRow);
             }
-            else if (threeDaysPlaceholder == (datePlaceholderXD)){
+            else if (threeDaysPlaceholder == (datePlaceholderXD)) {
                 date4.append(newRow)
             }
-            else if (fourDaysPlaceholder == (datePlaceholderXD)){
+            else if (fourDaysPlaceholder == (datePlaceholderXD)) {
                 date5.append(newRow);
-            }
-            else {
-                seatGeekDiv.append(newRow);
             }
         }
     })
@@ -110,11 +110,11 @@ var search = ''
 $("#searchBtn").click(function () {
     seatGeekDiv.empty();
     $(".eventDates").empty();
-    date1.append("<h3> Today: </h3>");
-    date2.append("<h3> Tomorrow: </h3>");
-    date3.append("<h3> Two Days From Now: </h3>");
-    date4.append("<h3> Three Days From Now: </h3>");
-    date5.append("<h3> Four Days From Now: </h3>");
+    date1.append("<h3> Today </h3>");
+    date2.append("<h3> Tomorrow </h3>");
+    date3.append("<h3> Two Days From Now </h3>");
+    date4.append("<h3> Three Days From Now </h3>");
+    date5.append("<h3> Four Days From Now </h3>");
     search = $("#searchBar").val();
     runAjax(search);
     runAjax2(search);
