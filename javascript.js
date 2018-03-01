@@ -111,6 +111,7 @@ function runAjax2(search) {
 var search = ''
 
 $("#searchBtn").click(function () {
+    $("#forecast").empty();
     seatGeekDiv.empty();
     $(".eventDates").empty();
     $(".dateLabel").empty();

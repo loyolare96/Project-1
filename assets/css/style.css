@@ -250,3 +250,10 @@ svg, path {
     height: 0px; 
     width: 0px;
 }
+
+.weatherDiv {
+    border: 2px solid black;
+    background-color: white;
+    display: inline-block;
+    color: black;
+}
