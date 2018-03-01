@@ -13,10 +13,9 @@
     margin-top: 21px;
 }
 
-
-
-#date, #date2, #date3, #date4, #date5 {
+#date1, #date2, #date3, #date4, #date5 {
     width: 100%; 
+    padding: 5px;
 }
 
 #day1, #day2, #day3, #day4, #day5 {
@@ -29,23 +28,19 @@
     display: inline-block;
     margin-top: 10px;
     margin-bottom: 10px;
-    border: solid;
-    border-color: black;
-    border-width: 3px;
     margin: 10px;
     padding: 10px;
+}
+
+div.border {
+    border: solid;
+    border-color: white;
+    border-width: 3px;
 }
 
 #pic1, #pic2, #pic3, #pic4, #pic5, #tempF1, #tempF2, #tempF3, #tempF4, #tempF5, #tempC1, #tempC2, #tempC3, #tempC4, #tempC5, #wind1, #wind2, #wind3, #wind4, #wind5, #humid1, #humid2, #humid3, #humid4, #humid5 {
     display: inline-block;
     margin: 10px;
-}
-
-#main {
-    margin: 0 auto;
-    left: 50%;
-    right: 50%;
-    min-height: 85vh;
 }
 
 body {
@@ -81,17 +76,26 @@ div.cloud {
     color: white;
 }
 
-div.default {
-    background: url(../images/default.jpg) no-repeat center center fixed;
+div.head {
+    background: url(../images/header.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 
+div.input {
+    padding: 10px;
+    min-width: 200px;
+    max-width: 60vw;
+}
+
 div.main {
+    margin: 0 auto;
+    left: 50%;
+    right: 50%;
+    min-height: 85vh;
     width: 100%;
-    background-color: white;
 }
 
 div.rain {
@@ -187,25 +191,33 @@ h2 {
     margin: 0px;
     padding-top: 5px;
 }
-h2 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+
+h3 {
+    padding: 10px;
     text-align: center;
     background-color: white; 
     border: solid; 
     border-width: 2px; 
     border-color: black; 
 }
+
 header {
     color: white;
     width: 100%;
     min-width: 280px;
 }
 
+input, select {
+    color: white; 
+}
 
 img {
     height: 19vw;
     width: 19vw;
+}
+
+label {
+    color: white; 
 }
 
 #imagelol {
