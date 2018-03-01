@@ -168,7 +168,10 @@ div.storm {
     border-top-width: 3px; 
     border-left-width: 0;
     border-right-width: 0;
+}
 
+div.carrot {
+    display: inline-block;
 }
 
 h3 {
@@ -211,4 +214,18 @@ label {
 
 .caret {
     visibility: hidden;
+}
+
+footer {
+    background-color: #666666;
+    padding: 5px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    border-top-style: solid;
+    border-top-width: 3px;
+    border-top-color: #4aaaa5;
+    color: white; 
 }
