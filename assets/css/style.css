@@ -7,10 +7,9 @@
     margin-top: 21px;
 }
 
-
-
-#date, #date2, #date3, #date4, #date5 {
+#date1, #date2, #date3, #date4, #date5 {
     width: 100%; 
+    padding: 5px;
 }
 
 #day1, #day2, #day3, #day4, #day5 {
@@ -23,23 +22,19 @@
     display: inline-block;
     margin-top: 10px;
     margin-bottom: 10px;
-    border: solid;
-    border-color: black;
-    border-width: 3px;
     margin: 10px;
     padding: 10px;
+}
+
+div.border {
+    border: solid;
+    border-color: white;
+    border-width: 3px;
 }
 
 #pic1, #pic2, #pic3, #pic4, #pic5, #tempF1, #tempF2, #tempF3, #tempF4, #tempF5, #tempC1, #tempC2, #tempC3, #tempC4, #tempC5, #wind1, #wind2, #wind3, #wind4, #wind5, #humid1, #humid2, #humid3, #humid4, #humid5 {
     display: inline-block;
     margin: 10px;
-}
-
-#main {
-    margin: 0 auto;
-    left: 50%;
-    right: 50%;
-    min-height: 85vh;
 }
 
 body {
@@ -48,6 +43,9 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    width: 100vw;
+    font-family: 'PT Sans Caption', sans-serif;
+    width: 100vw;
 }
 
 div.clear {
@@ -56,6 +54,12 @@ div.clear {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    border: solid;
+    border-color: skyblue; 
+    border-bottom-width: 3px;
+    border-top-width: 3px; 
+    border-left-width: 0;
+    border-right-width: 0;
 }
 
 div.cloud {
@@ -64,19 +68,34 @@ div.cloud {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    border: solid;
+    border-color: darkgray; 
+    border-bottom-width: 3px;
+    border-top-width: 3px; 
+    border-left-width: 0;
+    border-right-width: 0;
 }
 
-div.default {
-    background: url(../images/default.jpg) no-repeat center center fixed;
+div.head {
+    background: url(../images/header.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 
+div.input {
+    padding: 10px;
+    min-width: 200px;
+    max-width: 60vw;
+}
+
 div.main {
+    margin: 0 auto;
+    left: 50%;
+    right: 50%;
+    min-height: 85vh;
     width: 100%;
-    background-color: white;
 }
 
 div.rain {
@@ -85,6 +104,24 @@ div.rain {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    border: solid;
+    border-color: darkblue; 
+    border-bottom-width: 3px;
+    border-top-width: 3px; 
+    border-left-width: 0;
+    border-right-width: 0;
+}
+
+div.row {
+    margin: 0;
+    padding: 0;
+}
+
+div.select {
+    padding: 10px;
+    min-width: 200px;
+    max-width: 20vw;
+    display: inline-block;
 }
 
 div.snow {
@@ -93,6 +130,16 @@ div.snow {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    border: solid;
+    border-color: #0099ff; 
+    border-bottom-width: 3px;
+    border-top-width: 3px; 
+    border-left-width: 0;
+    border-right-width: 0;
+}
+
+div.space {
+    margin-bottom: 20px;
 }
 
 div.sun {
@@ -101,6 +148,12 @@ div.sun {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    border: solid;
+    border-color: skyblue; 
+    border-bottom-width: 3px;
+    border-top-width: 3px; 
+    border-left-width: 0;
+    border-right-width: 0;
 }
 
 div.storm {
@@ -109,24 +162,38 @@ div.storm {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
-h2 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-h3 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-    background-color: white;
-    border: 2px solid black;
+    border: solid;
+    border-color: grey; 
+    border-bottom-width: 3px;
+    border-top-width: 3px; 
+    border-left-width: 0;
+    border-right-width: 0;
+
 }
 
+h3 {
+    padding: 10px;
+    text-align: center;
+}
+
+header {
+    margin-top: 0;
+    padding-top: 0;
+    color: white;
+    top: 0;
+}
+
+input, select {
+    color: white; 
+}
 
 img {
     height: 19vw;
     width: 19vw;
+}
+
+label {
+    color: white; 
 }
 
 #imagelol {
@@ -144,9 +211,4 @@ img {
 
 .caret {
     visibility: hidden;
-}
-
-.noEvents {
-    text-align: center;
-    background-color: #eff9fd;
 }
