@@ -183,7 +183,11 @@ div.storm {
     border-right-width: 0;
 
 }
-
+h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
 h3 {
     padding: 10px;
     text-align: center;
@@ -218,20 +222,7 @@ img {
     visibility: hidden;
 }
 
-div.row {
-    margin: 0;
-    padding: 0;
-}
-
-div.ugh {
-    padding-bottom: 10px;
-}
-
-div.margin {
-    width: 100%;
-    margin: 0 auto; 
-}
-
-.eventDates:empty {
-    display: none;
+.noEvents {
+    text-align: center;
+    background-color: #eff9fd;
 }
