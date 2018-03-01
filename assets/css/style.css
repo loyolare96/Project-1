@@ -22,12 +22,8 @@
     display: inline-block;
     margin-top: 10px;
     margin-bottom: 10px;
-    border: solid;
-    border-color: black;
-    border-width: 3px;
     margin: 10px;
     padding: 10px;
-    background-color: white;
 }
 
 div.border {
@@ -174,16 +170,10 @@ div.storm {
     border-right-width: 0;
 
 }
-h2 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-}
+
 h3 {
     padding: 10px;
     text-align: center;
-    border: 2px solid black;
-    background-color: white;
 }
 
 header {
@@ -221,9 +211,4 @@ label {
 
 .caret {
     visibility: hidden;
-}
-
-.noEvents {
-    text-align: center;
-    background-color: #eff9fd;
 }
