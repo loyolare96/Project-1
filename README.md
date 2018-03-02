@@ -1,1 +1,1 @@
-# Project 1
+Our project combines the OpenWeather and SeatGeek APIs to allow users to find last-minute events to attend. We provide a 5-day weather forecast (counting today) and present events happening with 5 days (counting today) of the user's search. This will allow users to consider weather conditions when choosing events. Our front-end page is compatible with most mobile devices, as elements will continue to function (and look presentable) down to a minimum width of 280px.
