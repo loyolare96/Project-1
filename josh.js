@@ -31,14 +31,16 @@ function runAjax(search) {
         }
         while (!(h == 15 || h == 16 || h == 17));
         console.log(i);
-
+        
+        var k = 0;
+        
         for (var j = i; j < response.list.length; j = j + 8) {
             console.log(j);
             var temp = response.list[j].main.temp;
             var humidity = response.list[j].main.humidity;
             var wind = response.list[j].wind.speed;
             var weatherDiv = $("<div class = 'weatherDiv'>");
-            var dayTitle = arr[i++]
+            var dayTitle = arr[k++]
             var weatherDesc = response.list[j].weather["0"].main;
             weatherDiv.append("<h6 class = 'bold'>" + dayTitle + "</h6>" + "<br>");
 
